@@ -400,6 +400,6 @@ async def main():
         json.dump(count_old, f, ensure_ascii=False, indent=4)
 # 运行主函数
 if __name__ == '__main__':
-    # asyncio.run(main())
-    clear_file()
+    asyncio.run(main())
+    # clear_file()
     
