@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: yapi
         subtemplates:
-          -
+          - tags: yapi

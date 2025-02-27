@@ -1,19 +1,19 @@
 id: multilanguage
 
 info:
-  name: >
-    Multilanguage by BestWebSoft < 1.2.3 - Reflected Cross-Site Scripting
+  name: "Multilanguage by BestWebSoft < 1.2.3 - Reflected Cross-Site Scripting"
   author: topscoder
   severity: medium
-  description: >
-    
+  description: "The Multilanguage by BestWebSoft plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘category’ parameter in versions before 1.2.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/78f04982-7f42-4c10-9fad-2584a26a4c79?source=api-scan
+    - https://web.archive.org/web/20191101101637/http%3A//www.defensecode.com%3A80/advisories/DC-2017-02-014_50_WordPress_plugins_by_BestWebSoft_Advisory.pdf
+    - http://jvn.jp/en/jp/JVN24834813/index.html
+    - https://wordpress.org/plugins/multilanguage/#developers
+    - https://plugins.trac.wordpress.org/changeset/1621091
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/multilanguage/"
     google-query: inurl:"/wp-content/plugins/multilanguage/"

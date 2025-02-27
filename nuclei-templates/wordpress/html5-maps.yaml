@@ -2,14 +2,14 @@ id: html5-maps
 
 info:
   name: >
-    HTML5 Maps <= 1.6.5.6 - Cross-Site Request Forgery
+    HTML5 Maps <= 1.7.1.4 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/decb80c9-8f04-4d39-8e77-220f7862995e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/502bc68d-778a-47df-a5c2-6bd0b4f130cc?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.6.5.6')
+          - compare_versions(version, '<= 1.7.1.4')

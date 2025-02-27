@@ -2,23 +2,23 @@ id: custom-facebook-feed
 
 info:
   name: >
-    Smash Balloon Social Post Feed <= 4.0 - Arbitrary Plugin Settings Update to Stored Cross-Site Scripting
+    Smash Balloon Plugins (Various Versions) - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: medium
   description: >
-    
+    Several Smash Balloon Plugins for WordPress are vulnerable to Reflected Cross-Site Scripting via URLs in various versions due to insufficient input sanitization and output escaping with the use of add_query_arg. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/74fac72d-6f16-475c-bc80-e77968dd23ad?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0efff314-b14f-4af4-b225-ba7e41d01b2e?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/custom-facebook-feed/"
     google-query: inurl:"/wp-content/plugins/custom-facebook-feed/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,custom-facebook-feed,high
+  tags: cve,wordpress,wp-plugin,custom-facebook-feed,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 4.0.1')
+          - compare_versions(version, '<= 2.19.1')

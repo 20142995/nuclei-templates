@@ -2,14 +2,14 @@ id: seraphinite-accelerator-ext
 
 info:
   name: >
-    Seraphinite Accelerator Premium <= 2.21.13 - Cross-Site Request Forgery to Arbitrary File Deletion
+    Seraphinite Accelerator <= 2.22.15 (2.21.13 PRO) - Authenticated (Subscriber+) Information Exposure
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bdf534bc-43a9-4f1b-9705-b367fbf870ac?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a2f8b6b3-fb5a-4244-8b97-56375c2f2ff1?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/seraphinite-accelerator-ext/"
     google-query: inurl:"/wp-content/plugins/seraphinite-accelerator-ext/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,seraphinite-accelerator-ext,medium
+  tags: cve,wordpress,wp-plugin,seraphinite-accelerator-ext,low
 
 http:
   - method: GET

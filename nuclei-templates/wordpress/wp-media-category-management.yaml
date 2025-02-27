@@ -2,14 +2,14 @@ id: wp-media-category-management
 
 info:
   name: >
-    WP Media Category Management 2.0 - 2.3.3 - Cross-Site Request Forgery to Settings Update
+    WP Media Category Management <= 2.2 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0d42ca2f-f061-4cd1-812b-46d42c440498?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cce0fd52-b4a3-4608-81ca-f50c859ae6a5?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '>= 2.0', '<= 2.3.3')
+          - compare_versions(version, '<= 2.2')

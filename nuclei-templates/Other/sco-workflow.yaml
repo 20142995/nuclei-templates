@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: sco
         subtemplates:
-          -
+          - tags: sco

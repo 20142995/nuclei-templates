@@ -1,16 +1,19 @@
 id: sl-user-create
 
 info:
-  name: "SL User Create < 0.2.5 - Information Disclosure"
+  name: >
+    SL User Create < 0.2.5 - Information Disclosure
   author: topscoder
   severity: low
-  description: "The SL User Create plugin for WordPress is vulnerable to Information Disclosure in versions before 0.2.5 due to a weak secret string. This can allow authenticated attackers to extract sensitive data including configuration files."
+  description: >
+    
   reference:
-
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d0f5b9b7-2482-4f25-b50e-e2d9b3ef4902?source=api-scan
   classification:
-    cvss-metrics:
-    cvss-score:
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/sl-user-create/"
     google-query: inurl:"/wp-content/plugins/sl-user-create/"
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 0.2.5')
+          - compare_versions(version, '< 0.2.5')

@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: mautic
         subtemplates:
-          -
+          - tags: mautic

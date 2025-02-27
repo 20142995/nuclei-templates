@@ -1,22 +1,19 @@
 id: modular
 
 info:
-  name: >
-    Modular <= 2.4 - Arbitrary File Deletion
+  name: "Modular <= 2.4 - Arbitrary File Download"
   author: topscoder
   severity: low
-  description: >
-    
+  description: "The Modular Theme for WordPress is vulnerable to Arbitrary File Download in versions up to, and including, 2.4. This is due to the '_mysite_download_skin' parameter in the 'dl-skin.php' file. This makes it possible for unauthenticated attackers to download any file within the server of the vulnerable service."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e2422f54-244c-4e69-8174-ee462a861e98?source=api-scan
+
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics:
+    cvss-score:
+    cve-id:
   metadata:
-    fofa-query: "wp-content/themes/modular/"
-    google-query: inurl:"/wp-content/themes/modular/"
+    fofa-query: "wp-content/unknown/modular/"
+    google-query: inurl:"/wp-content/unknown/modular/"
     shodan-query: 'vuln:'
   tags: cve,wordpress,wp-theme,modular,low
 
@@ -56,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4')
+          - compare_versions(version, '<=  2.4')

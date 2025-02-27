@@ -2,14 +2,14 @@ id: edoc-easy-tables
 
 info:
   name: >
-    eDoc Easy Tables <= 1.29 - Cross-Site Request Forgery to SQL Injection
+    eDoc Easy Tables <= 1.29 - Authenticated (Contributor+) SQL Injection
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cd9d7d34-c03d-4791-94b4-9d2f502a7e37?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5a109434-4e52-4823-8c5b-d755cb7cbdf9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/edoc-easy-tables/"
     google-query: inurl:"/wp-content/plugins/edoc-easy-tables/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,edoc-easy-tables,medium
+  tags: cve,wordpress,wp-plugin,edoc-easy-tables,low
 
 http:
   - method: GET

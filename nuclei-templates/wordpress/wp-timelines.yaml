@@ -2,14 +2,14 @@ id: wp-timelines
 
 info:
   name: >
-    WP Timeline – Vertical and Horizontal timeline plugin <= 3.6.7 - Unauthenticated Local File Inclusion
+    WP Timeline – Vertical and Horizontal timeline plugin <= 3.6.7 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fced0686-f56d-4163-80fd-362ee652d148?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/24b7e8d7-a9f2-4192-97c0-b7cbc1669a2a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-timelines/"
     google-query: inurl:"/wp-content/plugins/wp-timelines/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-timelines,critical
+  tags: cve,wordpress,wp-plugin,wp-timelines,medium
 
 http:
   - method: GET

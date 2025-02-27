@@ -11,15 +11,14 @@ info:
     Update the VPC endpoint's policy to restrict access only to authorized entities and ensure all requests are signed.
   reference:
     - https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html
-  metadata:
-    max-request: 2
   tags: cloud,devops,aws,amazon,vpc,aws-cloud-config
+
 variables:
   region: "us-east-1"
 
 flow: |
   code(1)
-  for(let VpcIds of iterate(template.VpcId)){
+  for(let VpcIds of template.VpcId){
     set("vpc", VpcIds)
     code(2)
   }
@@ -61,4 +60,4 @@ code:
       - type: dsl
         dsl:
           - '"VPC endpoints for " + vpc + "are exposed."'
-# digest: 490a0046304402200506111e97b28461eceb3c5334265051c3383b8a0eb553d5177f1c6344d933fb0220455e9ba374c56d762b53f3261e06eb79fca8809640330ecac13021f99a98aaed:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502206fa64b542b8c69a54cd76e83666f0b97b830db5028eb2b684f10388b858f03c7022100a060eff71326c75b63bd7b7caa82a62b376f352503548f36ae7875e06db2b0d1:922c64590222798bb761d5b6d8e72950

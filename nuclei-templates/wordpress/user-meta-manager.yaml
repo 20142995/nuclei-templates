@@ -2,14 +2,14 @@ id: user-meta-manager
 
 info:
   name: >
-    User Meta Manager Plugin < 3.4.7 - Privilege Escalation
+    User Meta Manager <= 3.4.9 - Cross Site Request Forgery
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/616c65e7-8d0c-4be8-bd6f-f98187ff1539?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/db6bb000-4f46-4a5a-b118-dcd3e78e4029?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.4.7')
+          - compare_versions(version, '<= 3.4.8')

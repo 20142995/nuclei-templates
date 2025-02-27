@@ -1,22 +1,24 @@
 id: double-opt-in-for-download
 
 info:
-  name: "Double Opt-In for Download <= 2.0.9 - SQL Injection"
+  name: >
+    Double Opt-In for Download <= 2.0.8 - SQL Injection
   author: topscoder
-  severity: high
-  description: "The Double Opt-In for Download Plugin for WordPress is vulnerable to generic SQL Injection via the ‘id’ parameter in versions up to, and including, 2.0.9 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for authenticated attackers, with subscriber-level permissions and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
+  severity: critical
+  description: >
+    
   reference:
-    - https://www.exploit-db.com/exploits/39896
-    - https://security.szurek.pl/en/double-opt-in-for-download-209-sql-injection/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/540ac650-6bfd-4ee2-b3c8-b6444a209b6a?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 8.8
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/double-opt-in-for-download/"
     google-query: inurl:"/wp-content/plugins/double-opt-in-for-download/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,double-opt-in-for-download,high
+  tags: cve,wordpress,wp-plugin,double-opt-in-for-download,critical
 
 http:
   - method: GET
@@ -54,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.1.0')
+          - compare_versions(version, '< 2.0.9')

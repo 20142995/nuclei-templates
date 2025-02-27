@@ -2,14 +2,14 @@ id: seedprod-coming-soon-pro-5
 
 info:
   name: >
-    SeedProd Pro <= 6.18.10 - Authenticated (Editor+) Remote Code Execution
+    SeedProd Pro <= 6.18.10 - Authenticated (Administrator+) SQL Injection
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/19b69d1e-84fd-446e-8de3-dad73bede5bb?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b07c507e-9fab-426d-998e-ab557d1f1b1a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

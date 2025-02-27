@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: metinfo
         subtemplates:
-          -
+          - tags: metinfo

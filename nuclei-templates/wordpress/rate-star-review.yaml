@@ -2,14 +2,14 @@ id: rate-star-review
 
 info:
   name: >
-    Rate Star Review Vote – AJAX Reviews, Votes, Star Ratings <= 1.6.3 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Rate Star Review <= 1.5.1 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/eb5a85ba-9545-4d64-ac7c-6b856e4ab354?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/025a13e6-5f0a-49ca-bd63-44e4095072bd?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/rate-star-review/"
     google-query: inurl:"/wp-content/plugins/rate-star-review/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,rate-star-review,low
+  tags: cve,wordpress,wp-plugin,rate-star-review,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.6.3')
+          - compare_versions(version, '<= 1.5.1')

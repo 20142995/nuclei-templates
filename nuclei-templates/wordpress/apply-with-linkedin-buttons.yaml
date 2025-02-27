@@ -2,14 +2,14 @@ id: apply-with-linkedin-buttons
 
 info:
   name: >
-    Apply with LinkedIn buttons <= 2.3 - Cross-Site Request Forgery to Stored Cross-Site Scripting
+    Apply with LinkedIn buttons <= 2.3 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7c248e3d-b6b2-4064-9006-3ddd85079308?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fd204edd-375e-437d-9964-bbf3b8abeab8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/apply-with-linkedin-buttons/"
     google-query: inurl:"/wp-content/plugins/apply-with-linkedin-buttons/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,apply-with-linkedin-buttons,medium
+  tags: cve,wordpress,wp-plugin,apply-with-linkedin-buttons,low
 
 http:
   - method: GET

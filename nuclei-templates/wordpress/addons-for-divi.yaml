@@ -2,23 +2,23 @@ id: addons-for-divi
 
 info:
   name: >
-    Divi Torque Lite – Divi Theme and Extra Theme <= 3.6.6 - Authenticated (Author+) Stored Cross-Site Scripting via SVG Upload
+    Freemius SDK <= 2.4.2 - Missing Authorization Checks
   author: topscoder
-  severity: low
+  severity: medium
   description: >
-    The Divi Torque Lite – Divi Theme and Extra Theme plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘support_unfiltered_files_upload’ function in all versions up to, and including, 3.6.6 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
+    The Freemius SDK, as used by hundreds of WordPress plugin and theme developers, was vulnerable to Cross-Site Request Forgery and Information disclosure due to missing capability checks and nonce protection on the _get_debug_log, _get_db_option, and the _set_db_option functions in versions up to, and including 2.4.2. Any WordPress plugin or theme running a version of Freemius less than 2.4.3 is vulnerable.
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/78dae5be-a71b-45bc-8814-7cc86233ae90?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/39fb0499-9ab4-4a2f-b0db-ece86bcf4d42?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 6.4
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L
+    cvss-score: 6.3
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/addons-for-divi/"
     google-query: inurl:"/wp-content/plugins/addons-for-divi/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,addons-for-divi,low
+  tags: cve,wordpress,wp-plugin,addons-for-divi,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.6.6')
+          - compare_versions(version, '< 3.5.0')

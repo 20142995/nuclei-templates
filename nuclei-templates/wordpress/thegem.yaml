@@ -2,14 +2,14 @@ id: thegem
 
 info:
   name: >
-    TheGem < 5.8.1.1 - Authenticated (Subscriber+) Stored Cross-Site Scripting
+    TheGem < 5.8.1.1 - Improper Authentication
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fc4d4103-a19a-45a5-9059-23eb7f72c84b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3942bba9-3c3a-47bf-9a53-95376917d6bb?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

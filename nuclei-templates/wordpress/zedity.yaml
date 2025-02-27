@@ -1,19 +1,19 @@
 id: zedity
 
 info:
-  name: "Zedity – The Layout-Free Content Editor < 2.5.1 - Reflected Cross-Site Scripting"
+  name: >
+    Zedity – The Layout-Free Content Editor < 2.5.1 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The Zedity – The Layout-Free Content Editor plugin for WordPress is vulnerable to Cross-Site Scripting via the 'zaction' parameter in versions before 2.5.1 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
+  description: >
+    The Zedity – The Layout-Free Content Editor plugin for WordPress is vulnerable to Cross-Site Scripting via the 'zaction' parameter in versions before 2.5.1 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://packetstormsecurity.com/files/125402/
-    - https://wordpress.org/plugins/zedity/#developers
-    - http://hauntit.blogspot.com/2014/02/en-wordpress-plugin-zedity-vulnerable.html
-    - https://plugins.trac.wordpress.org/changeset/868858
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/aa3ff74a-a38e-4cb3-b0b8-99fb16185f42?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/zedity/"
     google-query: inurl:"/wp-content/plugins/zedity/"

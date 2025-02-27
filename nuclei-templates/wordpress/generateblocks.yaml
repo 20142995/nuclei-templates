@@ -2,14 +2,14 @@ id: generateblocks
 
 info:
   name: >
-    GenerateBlocks <= 1.8.2 - Sensitive Information Exposure
+    GenerateBlocks <= 1.3.5 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/62f19301-2311-4989-a5f2-9f845b72dd54?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ffd3ecc8-8b76-453f-b2e9-a9c70c58edbf?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.8.2')
+          - compare_versions(version, '<= 1.3.5')

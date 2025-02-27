@@ -2,14 +2,14 @@ id: wp-limit-login-attempts
 
 info:
   name: >
-    WP Limit Login Attempts < 2.0.1 - SQL Injection
+    WP Limit Login Attempts <= 2.6.4 - IP Spoofing to Protection Mechanism Bypass
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/db7234a1-e888-454d-8a1c-4de19c4cbec4?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ef60c109-30e2-48e9-8599-6f226e74b6bc?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-limit-login-attempts/"
     google-query: inurl:"/wp-content/plugins/wp-limit-login-attempts/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-limit-login-attempts,critical
+  tags: cve,wordpress,wp-plugin,wp-limit-login-attempts,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.0.1')
+          - compare_versions(version, '<= 2.6.4')

@@ -1,24 +1,21 @@
 id: mainwp-favorites-extension
 
 info:
-  name: >
-    MainWP (Various extensions) - Cross-Site Request Forgery
+  name: "MainWP (Various Extensions) - Authenticated (Subscriber+) Arbitrary File Deletion"
   author: topscoder
-  severity: medium
-  description: >
-    Several MainWP extensions for WordPress are vulnerable to Cross-Site Request Forgery due to missing or incorrect nonce validation. This makes it possible for unauthenticated attackers to invoke functions normally intended for higher-privileged users such as administrators via forged request granted they can trick a site administrator into performing an action such as clicking on a link.
+  severity: low
+  description: "Several MainWP extensions for WordPress are vulnerable to arbitrary file downloads. This makes it possible for authenticated attackers, with subscriber-level permissions and above, to delete arbitrary files from the affected site."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cb105ff0-5085-4813-81a6-b1f0798d576c?source=api-prod
+
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    cvss-score: 8.8
-    cve-id: 
+    cvss-metrics:
+    cvss-score:
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/mainwp-favorites-extension/"
     google-query: inurl:"/wp-content/plugins/mainwp-favorites-extension/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,mainwp-favorites-extension,medium
+  tags: cve,wordpress,wp-plugin,mainwp-favorites-extension,low
 
 http:
   - method: GET
@@ -56,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.0.10')
+          - compare_versions(version, '<=  4.0.10')

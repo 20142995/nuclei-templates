@@ -2,14 +2,14 @@ id: woocommerce-gateway-stripe
 
 info:
   name: >
-    WooCommerce Stripe Payment Gateway <= 7.4.0 - Unauthenticated Insecure Direct Object Reference to Sensitive Information Disclosure
+    WooCommerce Stripe Payment Gateway <= 7.6.1 - Insecure Direct Object Reference via update_payment_intent_ajax
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/70971072-d743-466b-affe-d7f79d5712aa?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6ee04e4d-4385-4854-9bfe-1b957ca13963?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '7.4.0')
+          - compare_versions(version, '<= 7.6.1')

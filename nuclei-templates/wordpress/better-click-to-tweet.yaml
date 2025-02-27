@@ -1,22 +1,24 @@
 id: better-click-to-tweet
 
 info:
-  name: "Better Click To Tweet <= 5.10.1 - Reflected Cross-Site Scripting"
+  name: >
+    Better Click To Tweet <= 5.10.3 - Missing Authorization
   author: topscoder
-  severity: medium
-  description: "The Better Click To Tweet plugin for WordPress is vulnerable to Reflected Cross-Site Scripting in versions up to, and including, 5.10.1 due to insufficient input sanitization and output escaping on the $_SERVER['REQUEST_URI'] value. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  severity: high
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/better-click-to-tweet/#developers
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2715577%40better-click-to-tweet&new=2715577%40better-click-to-tweet&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cfd1e59a-a76d-4f6d-9d22-021afd45d9af?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/better-click-to-tweet/"
     google-query: inurl:"/wp-content/plugins/better-click-to-tweet/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,better-click-to-tweet,medium
+  tags: cve,wordpress,wp-plugin,better-click-to-tweet,high
 
 http:
   - method: GET
@@ -54,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.10.1')
+          - compare_versions(version, '<= 5.10.3')

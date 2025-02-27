@@ -2,14 +2,14 @@ id: fluent-support
 
 info:
   name: >
-    Fluent Support <= 1.8.0 - Authenticated (Subscriber+) SQL Injection
+    Fluent Support <= 1.7.6 - Authenticated(Administrator+) SQL Injection
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b78985ad-37e5-4eb3-b3aa-716972423848?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8909dafa-3383-405e-a264-f0770e6714a4?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.8.0')
+          - compare_versions(version, '< 1.7.7')

@@ -2,14 +2,14 @@ id: linkz-ai
 
 info:
   name: >
-    Linkz.ai <= 1.1.8 - Missing Authorization to Unauthenticated Plugin Settings Update
+    Linkz.ai <= 1.1.8 - Missing Authorization to Authenticated (Subscriber+) Plugin Settings Update via AJAX
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b4b4ca5b-c806-4b68-acb8-6b63d6ca5728?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b1faa178-e4b1-4d2e-85f1-b852fbf3ab17?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/linkz-ai/"
     google-query: inurl:"/wp-content/plugins/linkz-ai/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,linkz-ai,high
+  tags: cve,wordpress,wp-plugin,linkz-ai,low
 
 http:
   - method: GET

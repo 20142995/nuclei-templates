@@ -2,14 +2,14 @@ id: wooexim
 
 info:
   name: >
-    WOOEXIM <= 5.0.0 - Authenticated (Administrator+) SQL Injection
+    WOOEXIM – WooCommerce Export Import Plugin <= 5.0.0 - Unauthenticated PHP Object Injection
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6fa5a20e-d3e9-4def-be50-89f5310211f7?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/375aab8b-d46b-48b1-874b-0fb7136cb312?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wooexim/"
     google-query: inurl:"/wp-content/plugins/wooexim/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wooexim,low
+  tags: cve,wordpress,wp-plugin,wooexim,critical
 
 http:
   - method: GET

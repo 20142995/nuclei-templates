@@ -1,24 +1,21 @@
 id: mailster
 
 info:
-  name: >
-    Mailster <= 1.0.3 - Reflected Cross-Site Scripting
+  name: "Mailster <= 2.4.5.1 - Stored Cross-Site Scripting"
   author: topscoder
-  severity: medium
-  description: >
-    
+  severity: high
+  description: "The Mailster plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the administration interface in versions up to, and including, 2.4.5.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cc030c9a-3cda-4eb8-9a7f-94a4b65a4272?source=api-scan
+
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics:
+    cvss-score:
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/mailster/"
     google-query: inurl:"/wp-content/plugins/mailster/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,mailster,medium
+  tags: cve,wordpress,wp-plugin,mailster,high
 
 http:
   - method: GET
@@ -56,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.3')
+          - compare_versions(version, '<=  2.4.5.1')

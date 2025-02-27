@@ -1,19 +1,16 @@
 id: starbox-voting
 
 info:
-  name: >
-    Starbox Voting <= 2.0.4 - Full Path Disclosure
+  name: "Starbox Voting <= 2.0.4 - Full Path Disclosure"
   author: topscoder
   severity: low
-  description: >
-    
+  description: "The Starbox Voting plugin for WordPress is vulnerable to Sensitive Data Exposure in versions up to, and including, 2.0.4 via error handling. This can allow unauthenticated attackers to extract sensitive data including the full path of the WordPress installation"
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f34383c7-1d98-4f8a-aa43-542fe2d9a567?source=api-scan
+
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics:
+    cvss-score:
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/starbox-voting/"
     google-query: inurl:"/wp-content/plugins/starbox-voting/"
@@ -56,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.4')
+          - compare_versions(version, '<=  2.0.4')

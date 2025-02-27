@@ -5,18 +5,16 @@ info:
   tags: detect,tech,jumpserver
   severity: info
   metadata:
+    fofa-query:
+    - title="jumpserver"
     product: jumpserver
-    vendor: 00_unknown
-    verified: false
+    vendor: fit2cloud
+    verified: true
 http:
 - method: GET
   path:
   - '{{BaseURL}}/'
   matchers:
-  - type: favicon
-    hash:
-    - 20334371817c7368907b5ea52aab2d9e
-  - type: word
-    words:
-    - jumpserver
-    case-insensitive: true
+  - type: regex
+    regex:
+    - (?mi)<title[^>]*>jumpserver.*?</title>

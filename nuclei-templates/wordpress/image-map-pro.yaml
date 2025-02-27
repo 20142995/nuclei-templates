@@ -2,14 +2,14 @@ id: image-map-pro
 
 info:
   name: >
-    Image Map Pro <= 5.5.0 - Cross-Site Request Forgery
+    Image Map Pro <= 6.0.20 - Missing Authorization to Authenticated (Contributor+) Map Project Add/Update/Delete
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/81330ff8-25a5-403d-abaf-e7c54467abbc?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7c632452-8b13-4f78-aa8a-3c92bef5907f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/image-map-pro/"
     google-query: inurl:"/wp-content/plugins/image-map-pro/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,image-map-pro,medium
+  tags: cve,wordpress,wp-plugin,image-map-pro,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.5.0')
+          - compare_versions(version, '<= 6.0.20')

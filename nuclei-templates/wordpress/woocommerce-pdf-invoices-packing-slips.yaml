@@ -1,19 +1,16 @@
 id: woocommerce-pdf-invoices-packing-slips
 
 info:
-  name: >
-    WooCommerce PDF Invoices & Packing Slips <= 2.0.12 - Cross-Site Scripting
+  name: "WooCommerce PDF Invoices & Packing Slips <=  2.14.5 - Cross-Site Scripting"
   author: topscoder
   severity: high
-  description: >
-    
+  description: "The WooCommerce PDF Invoices & Packing Slips plugin for WordPress is vulnerable to Reflected Cross-Site Scripting  in versions up to, and including, 2.14.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5cf7075f-7209-49e6-acf9-6739b178d4dc?source=api-scan
+
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics:
+    cvss-score:
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/woocommerce-pdf-invoices-packing-slips/"
     google-query: inurl:"/wp-content/plugins/woocommerce-pdf-invoices-packing-slips/"
@@ -56,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.0.13')
+          - compare_versions(version, '2.14.5')

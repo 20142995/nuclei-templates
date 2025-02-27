@@ -2,14 +2,14 @@ id: parallax-image
 
 info:
   name: >
-    Parallax Image <= 1.8 - Authenticated (Contributor+) Stored Cross-Site Scripting via dd-parallax Shortcode
+    Parallax Image <= 1.7.1 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/57641366-85d3-4375-8cde-041227c9f811?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/55cd02d1-7b06-427b-840b-3ced73ad4a74?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.8')
+          - compare_versions(version, '<= 1.7.1')

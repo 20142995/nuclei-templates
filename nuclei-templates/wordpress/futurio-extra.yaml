@@ -2,14 +2,14 @@ id: futurio-extra
 
 info:
   name: >
-    Futurio Extra <= 1.6.2 - Authenticated (Admin+) SQL Injection
+    Futurio Extra <= 1.9.0 - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8f5a3ed2-1db2-47e4-9aca-8fb197174342?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b156379a-fbb8-4fc0-9cc0-534b131bf785?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/futurio-extra/"
     google-query: inurl:"/wp-content/plugins/futurio-extra/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,futurio-extra,low
+  tags: cve,wordpress,wp-plugin,futurio-extra,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.6.3')
+          - compare_versions(version, '<= 1.9.0')

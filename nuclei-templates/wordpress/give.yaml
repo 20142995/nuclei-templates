@@ -2,14 +2,14 @@ id: give
 
 info:
   name: >
-    GiveWP – Donation Plugin and Fundraising Platform <= 3.18.0 - Reflected Cross-Site Scripting
+    GiveWP <= 3.2.2 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/18c0f717-6825-4421-af53-68f1cf502f81?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d74d71a8-774a-4ebb-b254-0e65a8044319?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/give/"
     google-query: inurl:"/wp-content/plugins/give/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,give,medium
+  tags: cve,wordpress,wp-plugin,give,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.18.0')
+          - compare_versions(version, '<= 3.2.2')

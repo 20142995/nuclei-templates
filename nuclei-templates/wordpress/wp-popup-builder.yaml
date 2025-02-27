@@ -2,14 +2,14 @@ id: wp-popup-builder
 
 info:
   name: >
-    WP Popup Builder <= 1.2.8 - Reflected Cross-Site Scripting
+    WP Popup Builder <= 1.2.9 - Missing Authorization and Cross-Site Request Forgery
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fbc14a5f-fa6b-47fa-8e8b-502409b18ed6?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f613411e-2b2e-401d-87cd-a002e9c2fc08?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.8')
+          - compare_versions(version, '<= 1.2.9')

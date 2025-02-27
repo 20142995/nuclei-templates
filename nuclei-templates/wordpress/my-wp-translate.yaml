@@ -2,14 +2,14 @@ id: my-wp-translate
 
 info:
   name: >
-    My WP Translate <= 1.0.3 - Reflected Cross-Site Scripting
+    My WP Translate <= 1.0.3 - Unprotected AJAX Actions
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2b1261d9-ab21-4ec2-84d7-f12a2013607a?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/56b16f10-2f48-49db-85f6-f934bc267110?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/my-wp-translate/"
     google-query: inurl:"/wp-content/plugins/my-wp-translate/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,my-wp-translate,medium
+  tags: cve,wordpress,wp-plugin,my-wp-translate,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.3')
+          - compare_versions(version, '< 1.0.4')

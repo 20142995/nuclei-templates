@@ -2,14 +2,14 @@ id: folders
 
 info:
   name: >
-    Folders <= 2.9.2 - Authenticated (Author+) Arbitrary File Upload
+    Folders <= 2.9.2 - Authenticated (Author+) Arbitrary File Upload in handle_folders_file_upload
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/35afef52-350c-4b61-b9c0-3ae2572f81fb?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9ab28410-76c5-43cb-b87a-c99f8867167c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.9.3')
+          - compare_versions(version, '<= 2.9.2')

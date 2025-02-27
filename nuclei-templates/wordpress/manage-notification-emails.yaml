@@ -2,14 +2,14 @@ id: manage-notification-emails
 
 info:
   name: >
-    Manage Notification E-mails <= 1.8.5 - Missing Authorization
+    Manage Notification E-mails <= 1.8.2 - Cross-Site Request Forgery to Plugin Options Update
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/048bc117-88df-44b3-a30c-692bad23050f?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5ab0d9a2-ca77-439b-bced-8ab5d7b0518a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/manage-notification-emails/"
     google-query: inurl:"/wp-content/plugins/manage-notification-emails/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,manage-notification-emails,high
+  tags: cve,wordpress,wp-plugin,manage-notification-emails,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.8.5')
+          - compare_versions(version, '<= 1.8.2')

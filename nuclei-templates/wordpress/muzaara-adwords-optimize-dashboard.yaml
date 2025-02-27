@@ -2,14 +2,14 @@ id: muzaara-adwords-optimize-dashboard
 
 info:
   name: >
-    Optimize Your Campaigns – Google Shopping – Google Ads – Google Adwords <= 3.1 - Information Exposure
+    Optimize Your Campaigns – Google Shopping – Google Ads – Google Adwords <= 3.1 - Unauthenticated PHP Object Injection
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cfeca343-c796-45d5-a71d-8211d8b38b3e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/18c0673c-5e49-4324-a4fc-ae74f64cba94?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/muzaara-adwords-optimize-dashboard/"
     google-query: inurl:"/wp-content/plugins/muzaara-adwords-optimize-dashboard/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,muzaara-adwords-optimize-dashboard,low
+  tags: cve,wordpress,wp-plugin,muzaara-adwords-optimize-dashboard,critical
 
 http:
   - method: GET

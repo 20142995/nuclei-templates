@@ -2,14 +2,14 @@ id: mf-gig-calendar
 
 info:
   name: >
-    MF Gig Calendar <= 1.2.1 - Cross-Site Request Forgery
+    MF Gig Calendar <= 1.2.1 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7ae17154-bd68-4260-9b3a-bb73f2a70694?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c6c1a446-055b-4ac4-bceb-451c0fbe6369?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/mf-gig-calendar/"
     google-query: inurl:"/wp-content/plugins/mf-gig-calendar/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,mf-gig-calendar,medium
+  tags: cve,wordpress,wp-plugin,mf-gig-calendar,low
 
 http:
   - method: GET

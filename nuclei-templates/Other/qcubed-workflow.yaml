@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: qcubed
         subtemplates:
-          -
+          - tags: qcubed

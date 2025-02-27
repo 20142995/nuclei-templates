@@ -2,14 +2,14 @@ id: social-links
 
 info:
   name: >
-    Social Links <= 1.0.11 - Cross-Site Request Forgery to Stored Cross-Site Scripting
+    Social Links <= 1.2 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a9b3b5ae-b086-4068-aa05-a732f1a8f508?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/60a8b4b4-a54a-41d2-adff-5bf9d1934b96?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/social-links/"
     google-query: inurl:"/wp-content/plugins/social-links/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,social-links,medium
+  tags: cve,wordpress,wp-plugin,social-links,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.11')
+          - compare_versions(version, '<= 1.2')

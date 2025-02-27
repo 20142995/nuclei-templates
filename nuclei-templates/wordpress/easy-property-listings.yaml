@@ -2,14 +2,14 @@ id: easy-property-listings
 
 info:
   name: >
-    Easy Property Listings < 3.4 - Cross-Site Request Forgery
+    Easy Property Listings <= 3.3.3 - Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/516261b5-4356-40e1-9418-3243086bc1b4?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a8af7c85-977f-41aa-acbe-293dfa913577?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/easy-property-listings/"
     google-query: inurl:"/wp-content/plugins/easy-property-listings/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,easy-property-listings,medium
+  tags: cve,wordpress,wp-plugin,easy-property-listings,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.4')
+          - compare_versions(version, '<= 3.3.3')

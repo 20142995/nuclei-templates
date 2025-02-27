@@ -2,14 +2,14 @@ id: wp-listings
 
 info:
   name: >
-    IMPress Listings <= 2.0.1 - Reflected Cross-Site Scripting
+    IMPress Listings <= 2.6.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via Listing Fields
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3b98668e-a20f-49a3-a6d6-6da6d1c044d6?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d31b9022-ae45-4bc2-b820-fb88faf0796f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-listings/"
     google-query: inurl:"/wp-content/plugins/wp-listings/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-listings,medium
+  tags: cve,wordpress,wp-plugin,wp-listings,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.1')
+          - compare_versions(version, '<= 2.6.2')

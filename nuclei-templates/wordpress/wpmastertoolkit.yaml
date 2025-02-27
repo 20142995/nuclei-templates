@@ -2,14 +2,14 @@ id: wpmastertoolkit
 
 info:
   name: >
-    WPMasterToolKit <= 1.13.1 - Authenticated (Admin+) Arbitrary File Download
+    WPMasterToolKit <= 1.13.1 - Authenticated (Admin+) Arbitrary File Upload
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fa795a7e-9a7a-4686-9f42-df87f49f6e0d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/90d0b748-a56a-4932-8e43-751ca363725c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

@@ -2,14 +2,14 @@ id: zarinpal-paid-downloads
 
 info:
   name: >
-    Zarinpal Paid Download <= 2.3 - Reflected Cross-Site Scripting
+    Zarinpal Paid Downloads <= 2.3 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9f857556-76fc-407a-8dd3-a248a566232a?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c3799c76-2b25-4346-948e-14445d93b7f1?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

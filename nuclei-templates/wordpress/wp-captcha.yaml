@@ -2,14 +2,14 @@ id: wp-captcha
 
 info:
   name: >
-    WP Captcha <= 2.0.0 - CAPTCHA Bypass
+    WP Captcha <= 2.0.0 - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9bc2a04c-7b7c-483f-b81b-97a7caac179c?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/810adc9a-d4e1-46a8-89e4-22615cbbb9c6?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-captcha/"
     google-query: inurl:"/wp-content/plugins/wp-captcha/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-captcha,low
+  tags: cve,wordpress,wp-plugin,wp-captcha,medium
 
 http:
   - method: GET

@@ -2,23 +2,23 @@ id: ultimate-social-media-icons
 
 info:
   name: >
-    Social Media Share Buttons & Social Sharing Icons < 1.1.1.12 - Authenticated Stored Cross-Site Scripting
+    Social Media & Share Icons <= 2.8.1 - Missing Authorization via handle_installation
   author: topscoder
-  severity: low
+  severity: high
   description: >
-    The Social Media Share Buttons & Social Sharing Icons plugin for WordPress is vulnerable to Stored Cross-Site Scripting via several parameters in versions before 1.1.1.12 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers of low-privilege to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
+    
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c0d79ae1-e9e4-4798-aa29-519b80759be6?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1bfb5d34-738d-4842-be93-9668fceb3334?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 6.4
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/ultimate-social-media-icons/"
     google-query: inurl:"/wp-content/plugins/ultimate-social-media-icons/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ultimate-social-media-icons,low
+  tags: cve,wordpress,wp-plugin,ultimate-social-media-icons,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.1.11')
+          - compare_versions(version, '<= 2.8.1')

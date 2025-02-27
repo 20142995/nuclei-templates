@@ -6,16 +6,14 @@ info:
   severity: critical
   description: "The Magazine Basic plugin for WordPress is vulnerable to generic SQL Injection via the ‘id’ parameter due to insufficient escaping on the user-supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
   reference:
-    - https://packetstormsecurity.com/files/118321/
-    - https://www.securityfocus.com/bid/56664/
-    - https://wordpress.org/themes/magazine-basic/
+
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
+    cvss-metrics:
+    cvss-score:
     cve-id:
   metadata:
-    fofa-query: "wp-content/themes/magazine-basic/"
-    google-query: inurl:"/wp-content/themes/magazine-basic/"
+    fofa-query: "wp-content/unknown/magazine-basic/"
+    google-query: inurl:"/wp-content/unknown/magazine-basic/"
     shodan-query: 'vuln:'
   tags: cve,wordpress,wp-theme,magazine-basic,critical
 
@@ -55,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '>0')
+          - compare_versions(version, '*')

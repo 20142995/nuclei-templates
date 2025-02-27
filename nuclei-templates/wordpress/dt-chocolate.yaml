@@ -2,23 +2,23 @@ id: dt-chocolate
 
 info:
   name: >
-    Chocolate WP – Responsive Photography Theme (All Versions) - Remote File Inclusion
+    DT Chocolate <= 1.0 - Open Redirect
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
-    
+    The DT Chocolate theme for WordPress is vulnerable to Open Redirect in versions up to, and including, 1.0. This is due to a lack of sanitization of user-supplied input via the 'image' parameter. This makes it possible for attackers to redirect users to arbitrary websites.
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f0e77557-f377-4752-bc5b-ec00f2520150?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3f937290-fa45-4ce0-84f0-a42c83cd3bdf?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:N
+    cvss-score: 4.7
     cve-id: 
   metadata:
     fofa-query: "wp-content/themes/dt-chocolate/"
     google-query: inurl:"/wp-content/themes/dt-chocolate/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,dt-chocolate,critical
+  tags: cve,wordpress,wp-theme,dt-chocolate,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= *')
+          - compare_versions(version, '<= 1.0')

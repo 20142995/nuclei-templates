@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: sarg
         subtemplates:
-          -
+          - tags: sarg

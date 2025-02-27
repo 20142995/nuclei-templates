@@ -1,25 +1,24 @@
 id: accelerated-mobile-pages
 
 info:
-  name: "AMP for WP <= 0.9.97.19 - Missing Authorization"
+  name: >
+    AMP for WP <= 1.0.77.32 - Authenticated Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "TheAMP for WP plugin for WordPress is vulnerable to authorization bypass due to a missing capability check on the ampforwp_save_steps_data AJAX hook in versions up to, and including, 0.9.97.19. This makes it possible for authenticated attackers to make otherwise privilege locked administrative changes to the vulnerable website and create admin accounts."
+  severity: low
+  description: >
+    
   reference:
-    - https://github.com/sybrew/the-seo-framework/issues/203#issuecomment-431602416
-    - https://threatpost.com/critical-wordpress-flaw-grants-admin-access-to-any-registered-site-user/139162/
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-amp-for-wp-accelerated-mobile-pages-security-bypass-0-9-97-19/
-    - https://wpscan.com/vulnerability/9147
-    - https://www.webarxsecurity.com/amp-plugin-vulnerability/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cc6f017d-b0ba-494d-9ad1-8b6cdca48fb1?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L
-    cvss-score: 6.3
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/accelerated-mobile-pages/"
     google-query: inurl:"/wp-content/plugins/accelerated-mobile-pages/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,accelerated-mobile-pages,medium
+  tags: cve,wordpress,wp-plugin,accelerated-mobile-pages,low
 
 http:
   - method: GET
@@ -57,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 0.9.97.19')
+          - compare_versions(version, '<= 1.0.77.32')

@@ -2,14 +2,14 @@ id: wp-product-feed-manager
 
 info:
   name: >
-    WooCommerce Google Feed Manager <= 2.2.0 - Authenticated (Shop manager+) Stored Cross-Site Scripting
+    WooCommerce Google Feed Manager <= 2.4.2 - Authenticated (Admin+) SQL Injection to Reflected Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bf36c00f-e6a2-4630-b5ef-9015365be436?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/37bfb60d-8e2d-4c77-880c-3d17a6a434b8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.2.0')
+          - compare_versions(version, '<= 2.4.2')

@@ -2,14 +2,14 @@ id: download-plugins-dashboard
 
 info:
   name: >
-    Download Plugins and Themes in ZIP from Dashboard <= 1.9.1 - Reflected Cross-Site Scripting
+    Download Plugins and Themes from Dashboard <= 1.5.0 - Unauthenticated Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c3ea04ba-b609-49cd-aae8-68f5b51df154?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ab8a13d5-911a-4c25-8d5a-391146971c0c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/download-plugins-dashboard/"
     google-query: inurl:"/wp-content/plugins/download-plugins-dashboard/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,download-plugins-dashboard,medium
+  tags: cve,wordpress,wp-plugin,download-plugins-dashboard,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.9.1')
+          - compare_versions(version, '< 1.6.0')

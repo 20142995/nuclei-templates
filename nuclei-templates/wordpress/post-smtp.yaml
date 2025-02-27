@@ -2,14 +2,14 @@ id: post-smtp
 
 info:
   name: >
-    Post SMTP <= 2.9.9 - Authenticated (Administrator+) SQL Injection
+    POST SMTP Mailer <= 2.8.6 - Reflected Cross-Site Scripting via msg
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/faa6ecad-1430-4300-b314-53619d69837b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7681f984-d488-4da7-afe1-988e5ad012f2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/post-smtp/"
     google-query: inurl:"/wp-content/plugins/post-smtp/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,post-smtp,low
+  tags: cve,wordpress,wp-plugin,post-smtp,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.9.9')
+          - compare_versions(version, '<= 2.8.6')

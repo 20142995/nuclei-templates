@@ -2,14 +2,14 @@ id: mappress-google-maps-for-wordpress
 
 info:
   name: >
-    MapPress Maps for WordPress <= 2.88.14 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    MapPress Maps for WordPress <= 2.88.4 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/41e2c557-e462-4d9e-916c-b8352a6df571?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c3d2c9a4-32f7-484f-86ce-a33ef1174b28?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.88.14')
+          - compare_versions(version, '<= 2.88.4')

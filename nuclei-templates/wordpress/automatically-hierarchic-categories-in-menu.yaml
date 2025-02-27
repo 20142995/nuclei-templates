@@ -2,14 +2,14 @@ id: automatically-hierarchic-categories-in-menu
 
 info:
   name: >
-    Automatically Hierarchic Categories in Menu <= 2.0.5 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Automatically Hierarchic Categories in Menu <= 2.0.7 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d9fe53e3-1916-4de2-91a6-83e823fc6e91?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ad01d01a-d1d9-4c4e-9818-52298c2df89c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.5')
+          - compare_versions(version, '<= 2.0.7')

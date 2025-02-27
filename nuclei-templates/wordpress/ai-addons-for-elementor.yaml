@@ -2,14 +2,14 @@ id: ai-addons-for-elementor
 
 info:
   name: >
-    Elementor AI Addons – 70 Widgets, Premium Templates, Ultimate Elements <= 2.2.1 - Authenticated (Contributor+) Private Templates Content Disclosure
+    Elementor AI Addons <= 2.2.1 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c00d83a7-dd7a-407d-b44e-7ee0a2a1492a?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/53ad0496-a484-48e4-aa17-29d63e1a47e1?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: tpshop
         subtemplates:
-          -
+          - tags: tpshop

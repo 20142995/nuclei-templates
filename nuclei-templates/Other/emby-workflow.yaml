@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: emby
         subtemplates:
-          -
+          - tags: emby

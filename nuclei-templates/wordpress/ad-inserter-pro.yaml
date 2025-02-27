@@ -1,21 +1,24 @@
 id: ad-inserter-pro
 
 info:
-  name: "Ad Inserter Pro <= 2.7.15 - Arbitrary File Modification"
+  name: >
+    Ad Inserter Pro <= 2.7.15 - Arbitrary File Modification
   author: topscoder
-  severity: low
-  description: "The Ad Inserter Pro plugin for WordPress is vulnerable to Arbitrary File Modification in versions 2.7.15 via unknown mechanisms. The Wordfence Threat Intelligence team conducted a thorough review of the vulnerable plugin and could not determine a vulnerable component in the plugin, which leads us to believe there may have been some element on the plugin developers management side that may have made file modification possible without the appropriate authorizations. Reports indicate that attackers were deleting wp-config.php files to reset the site, which leads us to believe the vulnerability made arbitrary file deletion or modification possible."
+  severity: high
+  description: >
+    The Ad Inserter Pro plugin for WordPress is vulnerable to Arbitrary File Modification in versions 2.7.15 via unknown mechanisms. The Wordfence Threat Intelligence team conducted a thorough review of the vulnerable plugin and could not determine a vulnerable component in the plugin, which leads us to believe there may have been some element on the plugin developers management side that may have made file modification possible without the appropriate authorizations. Reports indicate that attackers were deleting wp-config.php files to reset the site, which leads us to believe the vulnerability made arbitrary file deletion or modification possible.
   reference:
-
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d0a81d60-d489-4786-aa21-805a1e2aa198?source=api-prod
   classification:
-    cvss-metrics:
-    cvss-score:
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 8.1
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/ad-inserter-pro/"
     google-query: inurl:"/wp-content/plugins/ad-inserter-pro/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ad-inserter-pro,low
+  tags: cve,wordpress,wp-plugin,ad-inserter-pro,high
 
 http:
   - method: GET
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<=  2.7.15')
+          - compare_versions(version, '<= 2.7.15')

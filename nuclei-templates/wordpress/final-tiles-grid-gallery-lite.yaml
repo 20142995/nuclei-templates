@@ -2,14 +2,14 @@ id: final-tiles-grid-gallery-lite
 
 info:
   name: >
-    Freemius SDK <= 2.4.2 - Missing Authorization Checks
+    Final Tiles Gallery <= 3.4.18 - Authenticated Stored Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/39fb0499-9ab4-4a2f-b0db-ece86bcf4d42?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/656bf2b4-1930-4e96-b92b-01593889a43f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/final-tiles-grid-gallery-lite/"
     google-query: inurl:"/wp-content/plugins/final-tiles-grid-gallery-lite/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,final-tiles-grid-gallery-lite,high
+  tags: cve,wordpress,wp-plugin,final-tiles-grid-gallery-lite,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.5.5')
+          - compare_versions(version, '<= 3.4.18')

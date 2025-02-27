@@ -2,14 +2,14 @@ id: linear
 
 info:
   name: >
-    Linear <= 2.8.1 - Cross-Site Request Forgery to Cache Reset
+    Linear <= 2.7.11 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/83af4ee4-2763-4706-8cb2-fa102a72be68?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ae9ff893-9a56-4e3b-805a-76ce48fb718f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/linear/"
     google-query: inurl:"/wp-content/plugins/linear/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,linear,medium
+  tags: cve,wordpress,wp-plugin,linear,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.8.1')
+          - compare_versions(version, '<= 2.7.11')

@@ -2,14 +2,14 @@ id: meks-themeforest-smart-widget
 
 info:
   name: >
-    Meks Smart Social Widget <= 1.6 - Cross-Site Request Forgery via meks_remove_notification
+    Meks ThemeForest Smart Widget <= 1.6 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3d0efe1d-69ad-483c-b200-38873f88433b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/72eb1cd3-47cb-4d9b-9bfd-87fef7859974?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/meks-themeforest-smart-widget/"
     google-query: inurl:"/wp-content/plugins/meks-themeforest-smart-widget/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,meks-themeforest-smart-widget,medium
+  tags: cve,wordpress,wp-plugin,meks-themeforest-smart-widget,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4')
+          - compare_versions(version, '<= 1.5')

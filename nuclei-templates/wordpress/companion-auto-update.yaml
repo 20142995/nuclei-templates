@@ -1,21 +1,24 @@
 id: companion-auto-update
 
 info:
-  name: "Companion Auto Update <= 3.3.5 - Authenticated (Admin+) SQL Injection"
+  name: >
+    Companion Auto Update <= 3.3.5 - Authenticated (Admin+) SQL Injection
   author: topscoder
-  severity: high
-  description: "The Companion Auto Update plugin for WordPress is vulnerable to SQL Injection in versions up to, and including, 3.3.5 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on several existing SQL queries. This makes it possible for authenticated attackers, with administrative privileges and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
+  severity: low
+  description: >
+    The Companion Auto Update plugin for WordPress is vulnerable to SQL Injection in versions up to, and including, 3.3.5 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on several existing SQL queries. This makes it possible for authenticated attackers, with administrative privileges and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.
   reference:
-
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d969fb35-2ee9-42ca-a9e8-f6453a1e6be9?source=api-prod
   classification:
-    cvss-metrics:
-    cvss-score:
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 7.2
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/companion-auto-update/"
     google-query: inurl:"/wp-content/plugins/companion-auto-update/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,companion-auto-update,high
+  tags: cve,wordpress,wp-plugin,companion-auto-update,low
 
 http:
   - method: GET
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.3.6')
+          - compare_versions(version, '< 3.3.6')

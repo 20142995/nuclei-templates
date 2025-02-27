@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: dahua
         subtemplates:
-          -
+          - tags: dahua

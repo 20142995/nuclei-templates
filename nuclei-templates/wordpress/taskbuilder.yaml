@@ -2,14 +2,14 @@ id: taskbuilder
 
 info:
   name: >
-    Taskbuilder – WordPress Project & Task Management plugin <= 3.0.6 - Authenticated (Contributor+) Stored Cross-Site Scripting via wppm_tasks Shortcode
+    Taskbuilder <= 3.0.6 - Authenticated (Subscriber+) SQL Injection
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fdc39d59-7c9d-4d5d-9fb5-b67d2324adaa?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/47243ee1-42da-480c-94b8-bdebd8f9eac6?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

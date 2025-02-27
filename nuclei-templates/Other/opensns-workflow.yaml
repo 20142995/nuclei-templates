@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: opensns
         subtemplates:
-          -
+          - tags: opensns

@@ -2,14 +2,14 @@ id: exclusive-team-for-elementor
 
 info:
   name: >
-    Appsero <= 1.2.1 - Missing Authorization
+    Appsero <= 1.2.0 - Cross-Site Request Forgery
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/84003388-c47c-41db-8d2d-4643aa375a89?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e869800a-6fbc-4a1a-97fd-92ecbf3305ff?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/exclusive-team-for-elementor/"
     google-query: inurl:"/wp-content/plugins/exclusive-team-for-elementor/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,exclusive-team-for-elementor,high
+  tags: cve,wordpress,wp-plugin,exclusive-team-for-elementor,medium
 
 http:
   - method: GET

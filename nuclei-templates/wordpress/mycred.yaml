@@ -2,14 +2,14 @@ id: mycred
 
 info:
   name: >
-    myCred – Points, Rewards, Gamification, Ranks, Badges & Loyalty Plugin <= 2.2 - Subscriber+ SQL Injection
+    myCred <= 2.7.2 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2c994021-d429-4652-ada5-34ec0517cb19?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/69695e2e-2086-4d50-8518-0b2f5ab9ea56?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/mycred/"
     google-query: inurl:"/wp-content/plugins/mycred/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,mycred,critical
+  tags: cve,wordpress,wp-plugin,mycred,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.2')
+          - compare_versions(version, '<= 2.7.2')

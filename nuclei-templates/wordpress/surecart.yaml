@@ -2,14 +2,14 @@ id: surecart
 
 info:
   name: >
-    SureCart <= 2.5.0 - Authenticated (Administrator+) Stored Cross-Site Scripting via plugin settings
+    SureCart <= 2.29.3 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/416c13ff-15ae-4ba4-8a95-7c07bec75c22?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4f2fdc9d-891e-49c6-9427-620772336854?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/surecart/"
     google-query: inurl:"/wp-content/plugins/surecart/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,surecart,low
+  tags: cve,wordpress,wp-plugin,surecart,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.5.0')
+          - compare_versions(version, '<= 2.29.3')

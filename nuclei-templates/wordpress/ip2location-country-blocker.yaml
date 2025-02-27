@@ -2,14 +2,14 @@ id: ip2location-country-blocker
 
 info:
   name: >
-    IP2Location Country Blocker <= 2.38.8 - Missing Authorization to Unauthenticated Information Exposure via admin_init Function
+    IP2Location Country Blocker <= 2.26.5 - Arbitrary Country Ban via Cross-Site Request Forgery
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b63bc2b6-1abc-4cfa-a7e5-3995640f66a7?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c1532e12-b786-4b87-ae19-951297c47a6c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/ip2location-country-blocker/"
     google-query: inurl:"/wp-content/plugins/ip2location-country-blocker/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ip2location-country-blocker,high
+  tags: cve,wordpress,wp-plugin,ip2location-country-blocker,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.38.8')
+          - compare_versions(version, '<= 2.26.5')

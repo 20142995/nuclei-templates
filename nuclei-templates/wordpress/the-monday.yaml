@@ -2,14 +2,14 @@ id: the-monday
 
 info:
   name: >
-    AccessPress Themes and Plugin <= Various Versions - Authenticated (Subscriber+) Arbitrary File Upload
+    AccessPress Themes and Plugin <= Various Versions - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4ef1a097-955c-4a0e-a1a2-b34ae2903d0e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/59bf14a9-5abe-4b83-9364-d318eedaba83?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/themes/the-monday/"
     google-query: inurl:"/wp-content/themes/the-monday/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,the-monday,low
+  tags: cve,wordpress,wp-theme,the-monday,medium
 
 http:
   - method: GET

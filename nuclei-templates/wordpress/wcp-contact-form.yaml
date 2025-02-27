@@ -2,14 +2,14 @@ id: wcp-contact-form
 
 info:
   name: >
-    WCP Contact Form <= 3.1.0 - Reflected Cross-Site Scripting via tab parameter
+    WCP Contact Form <= 3.1.0 - Missing Authorization via downloadCsv
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/33fd4542-0a46-4779-be02-d713dcbc8f96?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/17a4bd5c-0cd3-46e4-b6ee-edf87f0e92ca?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wcp-contact-form/"
     google-query: inurl:"/wp-content/plugins/wcp-contact-form/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wcp-contact-form,medium
+  tags: cve,wordpress,wp-plugin,wcp-contact-form,high
 
 http:
   - method: GET

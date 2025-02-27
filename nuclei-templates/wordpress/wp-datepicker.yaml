@@ -2,14 +2,14 @@ id: wp-datepicker
 
 info:
   name: >
-    WP Datepicker <= 2.1.1 - Missing Authorization
+    WP Datepicker <= 2.1.1 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/38e8275f-477e-4d07-85b0-8bca71cd7089?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5b12f597-c34c-4b3b-80a6-8fd25f60b862?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-datepicker/"
     google-query: inurl:"/wp-content/plugins/wp-datepicker/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-datepicker,high
+  tags: cve,wordpress,wp-plugin,wp-datepicker,low
 
 http:
   - method: GET

@@ -2,14 +2,14 @@ id: sydney-toolbox
 
 info:
   name: >
-    Sydney Toolbox <= 1.26 - Authenticated (Contributor+) Stored Cross-Site Scripting via _id
+    Sydney Toolbox <= 1.28 - Authenticated (Contributor+) Stored Cross-Site Scripting via Filterable Gallery
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0b20d638-82cb-48ce-96fa-fd42d06f649f?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ccf4554e-4b34-46b0-b423-5cee7150e6c2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.26')
+          - compare_versions(version, '<= 1.28')

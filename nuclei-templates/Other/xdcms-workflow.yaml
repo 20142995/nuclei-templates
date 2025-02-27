@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: xdcms
         subtemplates:
-          -
+          - tags: xdcms

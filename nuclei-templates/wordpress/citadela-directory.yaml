@@ -2,14 +2,14 @@ id: citadela-directory
 
 info:
   name: >
-    Citadela Listing <= 5.18.1 - Cross-Site Request Forgery
+    Citadela Listing <= 5.18.1 - Unauthenticated Sensitive Information Exposure
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/911d083a-57d2-4574-a5b3-b299c368400c?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/676c8ed5-5a59-413f-af7a-49d6927cd9b1?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/citadela-directory/"
     google-query: inurl:"/wp-content/plugins/citadela-directory/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,citadela-directory,medium
+  tags: cve,wordpress,wp-plugin,citadela-directory,low
 
 http:
   - method: GET

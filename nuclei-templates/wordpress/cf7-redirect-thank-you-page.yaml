@@ -2,14 +2,14 @@ id: cf7-redirect-thank-you-page
 
 info:
   name: >
-    Contact Form 7 Redirect & Thank You Page <= 1.0.7 - Reflected Cross-Site Scripting
+    Contact Form 7 Redirect & Thank You Page <= 1.0.3 - Cross-Site Request Forgery via cf7rl_admin_table
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9d67965c-f8f3-4868-a261-81cfc80dbcb3?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/99f831f2-fb96-4dc8-ba3d-6015fbc7e2e1?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.7')
+          - compare_versions(version, '<= 1.0.3')

@@ -2,14 +2,14 @@ id: mybooktable
 
 info:
   name: >
-    MyBookTable Bookstore <= 3.3.9 - Cross-Site Request Forgery
+    MyBookTable Bookstore <= 3.3.3 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b614aab2-a3e3-410a-917b-cc33634503ce?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/02b336ce-be41-4343-9817-0437bd2685c2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.3.9')
+          - compare_versions(version, '<= 3.3.3')

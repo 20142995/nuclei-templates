@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: umbraco
         subtemplates:
-          -
+          - tags: umbraco

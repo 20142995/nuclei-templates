@@ -2,14 +2,14 @@ id: wp-super-cache
 
 info:
   name: >
-    WP Super Cache <= 1.7.1 - Authenticated (Admin+) Remote Code Execution
+    WP Super Cache <= 1.4.4 - Authenticated File Deletion
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0f6bc166-8489-44bc-862e-dd4dcc1dcff8?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/51b6c73d-fd4f-4469-9859-fbae61b5924c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.7.2')
+          - compare_versions(version, '< 1.4.5')

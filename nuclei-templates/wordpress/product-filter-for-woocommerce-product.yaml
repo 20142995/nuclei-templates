@@ -1,21 +1,24 @@
 id: product-filter-for-woocommerce-product
 
 info:
-  name: "Product Filter For WooCommerce Product <= 1.3.1 - Unauthenticated SQL Injection"
+  name: >
+    Product Filter For WooCommerce Product <= 1.3.1 - Unauthenticated SQL Injection
   author: topscoder
-  severity: high
-  description: "The Product Filter For WooCommerce Product plugin for WordPress is vulnerable to SQL Injection via the `datastring` paramater in versions up to and including 1.3.1. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
+  severity: critical
+  description: >
+    
   reference:
-    - https://plugins.trac.wordpress.org/browser/product-filter-for-woocommerce-product/trunk/includes/ajax.php#L317
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d52d3291-838a-4b23-b969-8c6273faec1e?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    cvss-score: 7.5
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/product-filter-for-woocommerce-product/"
     google-query: inurl:"/wp-content/plugins/product-filter-for-woocommerce-product/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,product-filter-for-woocommerce-product,high
+  tags: cve,wordpress,wp-plugin,product-filter-for-woocommerce-product,critical
 
 http:
   - method: GET

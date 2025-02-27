@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: skywalking
         subtemplates:
-          -
+          - tags: skywalking

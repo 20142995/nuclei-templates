@@ -2,14 +2,14 @@ id: my-auctions-allegro-free-edition
 
 info:
   name: >
-    My auctions allegro <= 3.6.18 - Reflected Cross-Site Scripting
+    My auctions allegro <= 3.6.17 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/28a9c2ba-7667-4601-8808-7258af69a432?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/57a78696-5892-4621-992f-5e4a7d8fa965?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.6.18')
+          - compare_versions(version, '<= 3.6.17')

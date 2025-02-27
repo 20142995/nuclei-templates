@@ -2,14 +2,14 @@ id: feedzy-rss-feeds
 
 info:
   name: >
-    RSS Aggregator by Feedzy <= 4.4.2 - Missing Authorization to Arbitrary Page Creation and Publication
+    RSS Aggregator by Feedzy <= 3.4.2 - Cross-Site Request Forgery Bypass
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/181edcec-a57d-4516-935d-6777d2de77ae?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e3b916dc-3b94-4319-a805-0ea99d14429f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/feedzy-rss-feeds/"
     google-query: inurl:"/wp-content/plugins/feedzy-rss-feeds/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,feedzy-rss-feeds,high
+  tags: cve,wordpress,wp-plugin,feedzy-rss-feeds,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.4.2')
+          - compare_versions(version, '< 3.4.3')

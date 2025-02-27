@@ -2,14 +2,14 @@ id: woocommerce-warranty
 
 info:
   name: >
-    WooCommerce Warranty Requests <= 2.1.6 - Reflected Cross-Site Scripting
+    WooCommerce Warranty Requests <= 2.1.9 - Missing Authorization
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1665fda6-005d-42ba-883d-2e3ad7abe0ba?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/59b09f36-79e8-4f14-b970-a7994d193782?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/woocommerce-warranty/"
     google-query: inurl:"/wp-content/plugins/woocommerce-warranty/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woocommerce-warranty,medium
+  tags: cve,wordpress,wp-plugin,woocommerce-warranty,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.1.6')
+          - compare_versions(version, '<= 2.1.9')

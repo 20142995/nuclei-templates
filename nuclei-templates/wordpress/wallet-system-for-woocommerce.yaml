@@ -2,14 +2,14 @@ id: wallet-system-for-woocommerce
 
 info:
   name: >
-    Wallet System for WooCommerce <= 2.5.13 - Information Exposure via Log Files
+    Wallet System for WooCommerce <= 2.5.9 - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/19f8a656-696c-4e4f-a0a6-c71010a1ee12?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b81b06b4-559f-4b69-9fdd-e09e66525867?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wallet-system-for-woocommerce/"
     google-query: inurl:"/wp-content/plugins/wallet-system-for-woocommerce/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wallet-system-for-woocommerce,low
+  tags: cve,wordpress,wp-plugin,wallet-system-for-woocommerce,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.5.13')
+          - compare_versions(version, '<= 2.5.9')

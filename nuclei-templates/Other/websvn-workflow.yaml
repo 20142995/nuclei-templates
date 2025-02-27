@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: websvn
         subtemplates:
-          -
+          - tags: websvn

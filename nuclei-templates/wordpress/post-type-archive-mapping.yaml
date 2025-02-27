@@ -2,14 +2,14 @@ id: post-type-archive-mapping
 
 info:
   name: >
-    Custom Query Blocks <= 5.2.0 - Missing Authorization via REST Routes
+    Custom Query Blocks <= 5.3.1 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/16fd140b-c976-4425-8ac5-a524b8cf1a42?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/40aeb258-0c00-4cd3-944c-51c33a7e92c9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/post-type-archive-mapping/"
     google-query: inurl:"/wp-content/plugins/post-type-archive-mapping/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,post-type-archive-mapping,high
+  tags: cve,wordpress,wp-plugin,post-type-archive-mapping,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.2.0')
+          - compare_versions(version, '<= 5.3.1')

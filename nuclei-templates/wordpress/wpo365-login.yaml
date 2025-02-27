@@ -2,14 +2,14 @@ id: wpo365-login
 
 info:
   name: >
-    WordPress + Microsoft Office 365 / Azure AD | LOGIN <= 15.3 - Stored Cross-Site Scripting
+    WPO365 | LOGIN <= 11.6 - Authentication Bypass
   author: topscoder
-  severity: high
+  severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cd552e86-5f0f-4203-b648-f069503b48e3?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3d4cf93d-61af-4721-9751-9891e08ce7b8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wpo365-login/"
     google-query: inurl:"/wp-content/plugins/wpo365-login/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wpo365-login,high
+  tags: cve,wordpress,wp-plugin,wpo365-login,critical
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 15.3')
+          - compare_versions(version, '<= 11.6')

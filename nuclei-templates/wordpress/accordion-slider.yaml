@@ -2,14 +2,14 @@ id: accordion-slider
 
 info:
   name: >
-    Accordion Slider <= 1.9.11 - Authenticted (Contributor+) Stored Cross-Site Scripting via HTML Attribute
+    Multiple Plugins <= (Various Versions) - Authenticated (Contributor+) Stored DOM-Based Cross-Site Scripting via FancyBox JavaScript Library
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/94f19f56-0667-443e-8545-a17fbe9c3ddb?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d99d4b9a-aa09-434d-91a8-7afaa0e8b5db?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/accordion-slider/"
     google-query: inurl:"/wp-content/plugins/accordion-slider/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,accordion-slider,high
+  tags: cve,wordpress,wp-plugin,accordion-slider,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.9.11')
+          - compare_versions(version, '<= 1.9.12')

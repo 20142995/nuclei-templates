@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: 74cms
         subtemplates:
-          -
+          - tags: 74cms

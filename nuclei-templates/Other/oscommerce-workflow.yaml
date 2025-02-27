@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: oscommerce
         subtemplates:
-          -
+          - tags: oscommerce

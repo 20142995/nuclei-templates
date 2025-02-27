@@ -2,14 +2,14 @@ id: mobile-friendly-flickr-slideshow
 
 info:
   name: >
-    Responsive Flickr Slideshow <= 2.6.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Responsive Flickr Slideshow <= 2.6.1 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bda01b23-1759-433a-971d-73b8458ad9ce?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8023be86-2bdb-4f16-9b54-a959f1e75e46?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.6.0')
+          - compare_versions(version, '<= 2.6.1')

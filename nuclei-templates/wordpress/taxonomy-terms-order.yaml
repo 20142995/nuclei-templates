@@ -1,19 +1,18 @@
 id: taxonomy-terms-order
 
 info:
-  name: >
-    Category Order and Taxonomy Terms Order <1.4.6.0 - Cross-Site Scripting
+  name: "Category Order and Taxonomy Terms Order <1.4.6.0 - Cross-Site Scripting"
   author: topscoder
   severity: medium
-  description: >
-    The Category Order and Taxonomy Terms Order plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 1.4.6.0 due to insufficient input sanitization and output escaping on the 'post_type' parameter. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser.
+  description: "The Category Order and Taxonomy Terms Order plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 1.4.6.0 due to insufficient input sanitization and output escaping on the 'post_type' parameter. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c5e66244-2b86-491b-9eca-19e42e7f2da8?source=api-prod
+    - http://cinu.pl/research/wp-plugins/mail_5f6c434ade55bf1fa6106da16471b01c.html
+    - http://blog.cinu.pl/2015/11/php-static-code-analysis-vs-top-1000-wordpress-plugins.html
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-category-order-and-taxonomy-terms-order-cross-site-scripting-1-4-6/
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/taxonomy-terms-order/"
     google-query: inurl:"/wp-content/plugins/taxonomy-terms-order/"

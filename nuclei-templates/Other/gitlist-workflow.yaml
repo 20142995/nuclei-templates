@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: gitlist
         subtemplates:
-          -
+          - tags: gitlist

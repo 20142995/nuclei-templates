@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: subrion
         subtemplates:
-          -
+          - tags: subrion

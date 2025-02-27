@@ -3,7 +3,7 @@ id: cloudflare-rocketloader-htmli
 info:
   name: Cloudflare Rocket Loader - HTML Injection
   author: j3ssie
-  severity: unknown
+  severity: low
   description: |
     The Rocket Loader feature in Cloudflare allow attackers to inject arbitrary HTML into the website. This can be used to perform various attacks such as phishing, defacement, etc.
   remediation: Disable the rocket loader or Add a CSP header to fix this issue.
@@ -13,7 +13,7 @@ info:
   metadata:
     verified: true
     max-request: 1
-  tags: misconfig,cloudflare,htmli,miscellaneous
+  tags: misconfig,cloudflare,htmli
 
 http:
   - method: GET
@@ -39,4 +39,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100fb1e62e23ca2fabae5ffb89410f9adb4b139fc5128bf0b56efb219cb67ca7196022016ed5944ae69a92d056c3540e5e2b04cb0a6e256fc9df37e63909be77a2b31b8:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220078dae8c97372b931bd7435693b67c204a81c9411fcbe20e1fc657d63704bdff02200cc52e3711d11352ce0f241c9cc79a6371d05c0070ec19166837dfcea4382ead:922c64590222798bb761d5b6d8e72950

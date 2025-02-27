@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: nette
         subtemplates:
-          -
+          - tags: nette

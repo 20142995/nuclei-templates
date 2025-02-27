@@ -2,14 +2,14 @@ id: peepso-core
 
 info:
   name: >
-    Community by PeepSo <= 6.0.9.0 - Cross-Site Request Forgery to Field Duplication
+    Community by PeepSo <= 6.0.2.0 - Cross-Site Request Forgery leading to Plugin/Subscription Deletion
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8a8ac15a-9f9b-4bb8-81a4-1fdd11670a07?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/dcf59d89-43e9-4bb2-be4f-9308698d1bb3?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 6.0.9.0')
+          - compare_versions(version, '<= 6.0.2.0')

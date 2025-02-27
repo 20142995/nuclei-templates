@@ -1,19 +1,16 @@
 id: rss-includes-pages
 
 info:
-  name: >
-    RSS Includes Pages <= 3.6 - Cross-Site Scripting
+  name: "RSS Includes Pages <= 3.6 - Cross-Site Scripting"
   author: topscoder
   severity: high
-  description: >
-    
+  description: "The RSS Includes Pages plugin plugin for WordPress is vulnerable to Cross-Site Scripting via the 'REQUEST_URI' parameter in versions up to, and including, 3.6 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cb5c08ea-1321-42f8-aea2-49661396311b?source=api-scan
+
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics:
+    cvss-score:
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/rss-includes-pages/"
     google-query: inurl:"/wp-content/plugins/rss-includes-pages/"
@@ -56,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.7')
+          - compare_versions(version, '<= 3.7')

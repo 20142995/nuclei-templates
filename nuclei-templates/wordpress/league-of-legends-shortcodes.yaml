@@ -2,14 +2,14 @@ id: league-of-legends-shortcodes
 
 info:
   name: >
-    League of Legends Shortcodes <= 1.0.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
+    League of Legends Shortcodes <= 1.0.1 - Authenticated (Contributor+) SQL Injection via Shortcode
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/45e96aa3-97bb-4774-a1b5-5f0a7b18293e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/22ddafad-9214-4d32-9fc3-3f3c759633ad?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

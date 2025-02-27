@@ -2,14 +2,14 @@ id: event-tickets-with-ticket-scanner
 
 info:
   name: >
-    Event Tickets with Ticket Scanner <= 1.5.4 - Authenticated (Subscriber+) Stored Cross-Site Scripting
+    Event Tickets with Ticket Scanner <= 2.4.4 - Missing Authorization to Authenticated (Subscriber+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2ec40d89-9caa-44dc-8577-00fa6463348c?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4dcf1133-d437-4f0a-b2cf-c91e0f6b6ca9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.5.5')
+          - compare_versions(version, '<= 2.4.3')

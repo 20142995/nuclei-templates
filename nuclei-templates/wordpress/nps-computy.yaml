@@ -2,14 +2,14 @@ id: nps-computy
 
 info:
   name: >
-    NPS computy <= 2.7.5 - Cross-Site Request Forgery to Results Deletion
+    NPS computy <= 2.8.0 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/490b4ee5-dd99-42af-94af-b45cea27b287?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fabeeba6-f3c0-4f9c-a12f-c97801aad810?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.7.5')
+          - compare_versions(version, '<= 2.8.0')

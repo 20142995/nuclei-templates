@@ -2,14 +2,14 @@ id: wc-multivendor-marketplace
 
 info:
   name: >
-    WCFM - WooCommerce Multivendor Marketplace <= 3.4.11 - Unauthenticated SQL Injection
+    WCFM Marketplace <= 3.4.12 - Cross-Site Request Forgery
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2d6e9aea-6ccb-4c83-83bb-63c9c9f59005?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5c2cc9a3-cd20-4c9e-baa4-1aea69f84331?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wc-multivendor-marketplace/"
     google-query: inurl:"/wp-content/plugins/wc-multivendor-marketplace/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wc-multivendor-marketplace,critical
+  tags: cve,wordpress,wp-plugin,wc-multivendor-marketplace,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.4.11')
+          - compare_versions(version, '<= 3.4.12')

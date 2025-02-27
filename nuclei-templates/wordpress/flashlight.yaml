@@ -1,22 +1,19 @@
 id: flashlight
 
 info:
-  name: >
-    Flashlight <= 2.8.4 - Cross-Site Scripting
+  name: "Flashlight <= 2.8.4 - Cross-Site Scripting"
   author: topscoder
   severity: high
-  description: >
-    
+  description: "The Flashlight theme plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 2.8.4 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b722bf4e-1e04-4d80-b359-7d43596751a8?source=api-scan
+
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics:
+    cvss-score:
+    cve-id:
   metadata:
-    fofa-query: "wp-content/themes/flashlight/"
-    google-query: inurl:"/wp-content/themes/flashlight/"
+    fofa-query: "wp-content/unknown/flashlight/"
+    google-query: inurl:"/wp-content/unknown/flashlight/"
     shodan-query: 'vuln:'
   tags: cve,wordpress,wp-theme,flashlight,high
 
@@ -56,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.8.4')
+          - compare_versions(version, '<=  2.8.4')

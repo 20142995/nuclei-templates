@@ -2,14 +2,14 @@ id: yith-woocommerce-subscription
 
 info:
   name: >
-    YIT Plugin Framework <= 3.3.8 - Authenticated Settings Change
+    YITH plugins by YITHEMES <= (Various Versions) - Missing Authorization
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3b34a0c6-3573-48c7-8edb-c9cf9503da06?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b948574a-0aab-4596-83e6-04be21f78bc1?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/yith-woocommerce-subscription/"
     google-query: inurl:"/wp-content/plugins/yith-woocommerce-subscription/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,yith-woocommerce-subscription,low
+  tags: cve,wordpress,wp-plugin,yith-woocommerce-subscription,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.3.4')
+          - compare_versions(version, '<= 2.16.0')

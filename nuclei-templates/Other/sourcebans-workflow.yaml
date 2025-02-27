@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: sourcebans
         subtemplates:
-          -
+          - tags: sourcebans

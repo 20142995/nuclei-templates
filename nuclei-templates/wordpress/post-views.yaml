@@ -1,24 +1,23 @@
 id: post-views
 
 info:
-  name: >
-    Post Views <= 2.6.1.2 - Cross-Site Scripting
+  name: "Post Views <= 2.6.1.2 - Cross-Site Scripting"
   author: topscoder
-  severity: high
-  description: >
-    
+  severity: medium
+  description: "The Post Views plugin for WordPress is vulnerable to Cross-Site Scripting via the 'search_input' parameter in versions up to, and including, 2.6.1.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f618911f-fd03-41ec-a0e1-dba4aa7178ab?source=api-scan
+    - https://exchange.xforce.ibmcloud.com/vulnerabilities/80076
+    - https://plugins.trac.wordpress.org/changeset/634040/post-views
+    - https://wpscan.com/vulnerability/903d452f-629f-41fa-950d-0be9f12ecbdc
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/post-views/"
     google-query: inurl:"/wp-content/plugins/post-views/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,post-views,high
+  tags: cve,wordpress,wp-plugin,post-views,medium
 
 http:
   - method: GET

@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: laravel
         subtemplates:
-          -
+          - tags: laravel

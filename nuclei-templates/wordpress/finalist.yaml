@@ -1,21 +1,24 @@
 id: finalist
 
 info:
-  name: "Finalist (All Versions) - Cross-Site Scripting"
+  name: >
+    Finalist (All Versions) - Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The Finalist Plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘id’ parameter in all versions due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  severity: high
+  description: >
+    
   reference:
-    - https://packetstormsecurity.com/files/123597/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/30b4b98e-c566-4249-85a4-bfb0b5d5ac5d?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/finalist/"
     google-query: inurl:"/wp-content/plugins/finalist/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,finalist,medium
+  tags: cve,wordpress,wp-plugin,finalist,high
 
 http:
   - method: GET
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '>0')
+          - compare_versions(version, '<= *')

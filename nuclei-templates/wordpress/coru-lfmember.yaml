@@ -2,14 +2,14 @@ id: coru-lfmember
 
 info:
   name: >
-    Coru LFMember <= 1.0.2 - Cross-Site Request Forgery to Stored Cross-Site Scripting
+    Coru LFMember <= 1.0.2 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/46226921-a445-4fb7-9c90-bd2d6841dec7?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/12f7f9a0-96b0-4a61-b763-12ff679bf43d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

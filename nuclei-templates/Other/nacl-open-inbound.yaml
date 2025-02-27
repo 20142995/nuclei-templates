@@ -11,15 +11,14 @@ info:
     Restrict Network ACL inbound rules to only allow necessary IP ranges and ports as per the Principle of Least Privilege.
   reference:
     - https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html
-  metadata:
-    max-request: 2
   tags: cloud,devops,aws,amazon,vpc,aws-cloud-config
+
 variables:
   region: "us-east-1"
 
 flow: |
   code(1)
-  for(let NACLIDs of iterate(template.nacls)){
+  for(let NACLIDs of template.nacls){
     set("naclid", NACLIDs)
     code(2)
   }
@@ -61,4 +60,4 @@ code:
       - type: dsl
         dsl:
           - '"Access to the VPC subnets associated with your NACL " + naclid + " is not restricted."'
-# digest: 4a0a0047304502210090f1a4c3cf579052839a7c17926792dc80956b0a3ef6716f594d5dd3539e0e3f02205c9073431d5ad40af0eeb8a4ee457808e7ecac97f253ab129e5f27b78e4e9377:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022061fa0f1f88763697856638e53fa1b78a8587487f6f691d28fdd57818ef2ab00a02204919554ac19da3748543fd6a0299c765833719eece0b93ca663319a3b75faba2:922c64590222798bb761d5b6d8e72950

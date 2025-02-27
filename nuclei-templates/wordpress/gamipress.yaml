@@ -2,14 +2,14 @@ id: gamipress
 
 info:
   name: >
-    GamiPress <= 7.2.1 - Unauthenticated Arbitrary Shortcode Execution via gamipress_ajax_get_logs Function
+    GamiPress <= 2.5.6 - Cross-Site Request Forgery to User Earnings Deletion
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/55fa8423-9a41-4afe-9401-03d232caa656?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ff4b757a-9ede-496b-b559-cf952d39fe70?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/gamipress/"
     google-query: inurl:"/wp-content/plugins/gamipress/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,gamipress,low
+  tags: cve,wordpress,wp-plugin,gamipress,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 7.2.1')
+          - compare_versions(version, '<= 2.5.6')

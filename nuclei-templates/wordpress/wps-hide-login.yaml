@@ -2,14 +2,14 @@ id: wps-hide-login
 
 info:
   name: >
-    WPS Hide Login <= 1.9.11 - Hidden Login Page Location Disclosure
+    WPS Hide Login <= 1.5.2.2 - Login Page Disclosure via Referer Header
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bb81e90f-8da4-483c-9bc1-18b6c016df5e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d94f0347-2167-4840-b21c-3279de0f9325?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.9.11')
+          - compare_versions(version, '<= 1.5.2.2')

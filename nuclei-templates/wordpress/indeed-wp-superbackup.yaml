@@ -2,14 +2,14 @@ id: indeed-wp-superbackup
 
 info:
   name: >
-    Super Backup & Clone - Migrate for WordPress <= 2.3.3 - Unauthenticated Arbitrary File Upload
+    WP SuperBackup <= 2.3.3 - Unauthenticated Arbitrary File Upload
   author: topscoder
   severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7c31d9b3-38b1-49a1-b361-ffe97e02bff0?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5d5c553f-247d-4feb-8027-822cfaca4adf?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

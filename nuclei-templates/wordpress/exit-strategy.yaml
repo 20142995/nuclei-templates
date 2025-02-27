@@ -2,14 +2,14 @@ id: exit-strategy
 
 info:
   name: >
-    WordPress Exit Strategy <= 1.55 - Information Exposure
+    WordPress Exit Strategy <= 1.55 - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bc22ffe3-bd2a-4af8-84e7-5a53b68de141?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7c7115f9-a0b0-43ed-9153-a9fe87176e4e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/exit-strategy/"
     google-query: inurl:"/wp-content/plugins/exit-strategy/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,exit-strategy,low
+  tags: cve,wordpress,wp-plugin,exit-strategy,medium
 
 http:
   - method: GET

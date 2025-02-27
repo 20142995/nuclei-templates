@@ -2,14 +2,14 @@ id: shopbuilder
 
 info:
   name: >
-    ShopBuilder – Elementor WooCommerce Builder Addons <= 2.1.12 - Authenticated (Contributor+) Local File Inclusion
+    ShopBuilder – Elementor WooCommerce Builder Addons <= 2.1.8 - Unauthenticated Sensitive Information Exposure
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/23b6e418-5560-4543-9042-5f338df315e5?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d0f216fc-7073-42da-a3cc-7452fa9775bd?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.1.12')
+          - compare_versions(version, '<= 2.1.8')

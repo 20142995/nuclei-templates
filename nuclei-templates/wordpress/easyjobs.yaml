@@ -2,14 +2,14 @@ id: easyjobs
 
 info:
   name: >
-    easy.jobs <= 2.4.6 - Missing Authorization to Settings Update
+    EasyJobs <= 1.4.7 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/33cdd58b-9e5e-492e-a211-78de592f0663?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d3c4b62b-c8b1-40b8-b250-d9da94208c62?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/easyjobs/"
     google-query: inurl:"/wp-content/plugins/easyjobs/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,easyjobs,high
+  tags: cve,wordpress,wp-plugin,easyjobs,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4.6')
+          - compare_versions(version, '< 1.4.8')

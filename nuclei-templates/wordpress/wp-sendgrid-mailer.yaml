@@ -2,14 +2,14 @@ id: wp-sendgrid-mailer
 
 info:
   name: >
-    SendGrid for WordPress <= 1.4 - Missing Authorization to Authenticated (Subscriber+) Log Deletion
+    SendGrid for WordPress <= 1.4 - Missing Authorization
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bb7d99a7-1e7d-43e1-839c-286b454c8276?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3fa9e1cf-a7d5-4373-81ca-87e9275fe413?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-sendgrid-mailer/"
     google-query: inurl:"/wp-content/plugins/wp-sendgrid-mailer/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-sendgrid-mailer,low
+  tags: cve,wordpress,wp-plugin,wp-sendgrid-mailer,high
 
 http:
   - method: GET

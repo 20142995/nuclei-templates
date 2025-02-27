@@ -1,24 +1,21 @@
 id: wp-database-backup
 
 info:
-  name: >
-    WP Database Backup < 3.4 - Authenticated Stored Cross-Site Scripting
+  name: "WP Database Backup <= 5.1.2 - Unauthenticated Settings Update to Remote Code Execution"
   author: topscoder
-  severity: low
-  description: >
-    The WP Database Backup plugin for WordPress is vulnerable to Stored Cross-Site Scripting via several parameters in versions before 3.4 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
+  severity: critical
+  description: "The WP Database Backup plugin for WordPress is vulnerable to unauthenticated settings update that can lead to remote code execution via the wpsetting functionality in versions up to, and including, 5.1.2. This makes it possible for unauthenticated attackers to inject malicious code into settings that will execute when a back-up is triggered by an unsuspecting user."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1a684ca7-0856-418e-9229-3e74dafb5c89?source=api-prod
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2078035%40wp-database-backup&new=2078035%40wp-database-backup&sfp_email=&sfph_mail=
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 6.4
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/wp-database-backup/"
     google-query: inurl:"/wp-content/plugins/wp-database-backup/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-database-backup,low
+  tags: cve,wordpress,wp-plugin,wp-database-backup,critical
 
 http:
   - method: GET
@@ -56,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.4')
+          - compare_versions(version, '<= 5.1.2')

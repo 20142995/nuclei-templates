@@ -2,14 +2,14 @@ id: posti-shipping
 
 info:
   name: >
-    Posti Shipping <= 3.10.2 - Full Path Disclosure
+    Posti Shipping <= 3.10.3 - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/023bef79-a3ab-41f7-a287-955c6331c77e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/14b9fbd2-206d-49e2-9b53-a7ba459ee518?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/posti-shipping/"
     google-query: inurl:"/wp-content/plugins/posti-shipping/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,posti-shipping,low
+  tags: cve,wordpress,wp-plugin,posti-shipping,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.10.2')
+          - compare_versions(version, '<= 3.10.3')

@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: gateone
         subtemplates:
-          -
+          - tags: gateone

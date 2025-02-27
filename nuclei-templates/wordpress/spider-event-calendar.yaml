@@ -1,16 +1,19 @@
 id: spider-event-calendar
 
 info:
-  name: "SpiderCalendar <= 1.4.13 - Cross-Site Request Forgery"
+  name: >
+    SpiderCalendar <= 1.6.64 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The SpiderCalendar plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.4.13. This is due to missing or incorrect nonce validation on the Manage_Spider_Calendar() function. This makes it possible for unauthenticated attackers to make modifications to calendars via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+  description: >
+    
   reference:
-
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2da965b1-1f8d-4905-9711-bb9ad30f444a?source=api-scan
   classification:
-    cvss-metrics:
-    cvss-score:
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/spider-event-calendar/"
     google-query: inurl:"/wp-content/plugins/spider-event-calendar/"
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<=  1.4.13')
+          - compare_versions(version, '<= 1.5.65')

@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: yii
         subtemplates:
-          -
+          - tags: yii

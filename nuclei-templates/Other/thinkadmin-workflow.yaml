@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: thinkadmin
         subtemplates:
-          -
+          - tags: thinkadmin

@@ -2,14 +2,14 @@ id: fluent-smtp
 
 info:
   name: >
-    FluentSMTP – WP SMTP Plugin with Amazon SES, SendGrid, MailGun, Postmark, Google and Any SMTP Provider <= 2.2.82 - Unauthenticated PHP Object Injection
+    FluentSMTP <= 2.2.80 - Cross-Site Request Forgery
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a3deedc4-b939-4c54-8376-95d3728872d4?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/33a801ab-b86f-42b3-bb79-dad64617a56a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/fluent-smtp/"
     google-query: inurl:"/wp-content/plugins/fluent-smtp/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,fluent-smtp,critical
+  tags: cve,wordpress,wp-plugin,fluent-smtp,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.2.82')
+          - compare_versions(version, '<= 2.2.80')

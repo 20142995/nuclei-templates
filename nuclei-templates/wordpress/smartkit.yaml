@@ -1,21 +1,24 @@
 id: smartkit
 
 info:
-  name: "Smartkit <= 1.0 - Cross-Site Request Forgery to Cross-Site Scripting"
+  name: >
+    Smartkit <= 1.0 - Cross-Site Request Forgery to Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The Smartkit plugin for WordPress is vulnerable to Cross-Site Request Forgery via the show_smartkit_menu() function in versions up to, and including 1.0. This is due to missing nonce validation and can lead to stored Cross-Site Scripting if an attacker is able to successfully trick a site administrator into performing an action such as clicking on a link."
+  severity: high
+  description: >
+    The Smartkit plugin for WordPress is vulnerable to Cross-Site Request Forgery via the show_smartkit_menu() function in versions up to, and including 1.0. This is due to missing nonce validation and can lead to stored Cross-Site Scripting if an attacker is able to successfully trick a site administrator into performing an action such as clicking on a link.
   reference:
-
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a0b1e907-0c31-4b40-b3f9-0ac665f3394a?source=api-prod
   classification:
-    cvss-metrics:
-    cvss-score:
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/smartkit/"
     google-query: inurl:"/wp-content/plugins/smartkit/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,smartkit,medium
+  tags: cve,wordpress,wp-plugin,smartkit,high
 
 http:
   - method: GET
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<=  1.0')
+          - compare_versions(version, '<= 1.0')

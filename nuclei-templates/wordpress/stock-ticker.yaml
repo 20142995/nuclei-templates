@@ -2,14 +2,14 @@ id: stock-ticker
 
 info:
   name: >
-    Stock Ticker <= 3.23.4 - Authenticated (Contributor+) Stored Cross-Site Scritping
+    Stock Ticker <= 3.23.2 - Reflected Cross-Site Scripting in ajax_stockticker_symbol_search_test
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b8e921f4-d889-490f-a817-53d132a56f83?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3f8321a7-863c-43ab-a42a-e01d60101c3b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/stock-ticker/"
     google-query: inurl:"/wp-content/plugins/stock-ticker/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,stock-ticker,low
+  tags: cve,wordpress,wp-plugin,stock-ticker,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.23.4')
+          - compare_versions(version, '<= 3.23.2')

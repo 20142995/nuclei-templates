@@ -2,14 +2,14 @@ id: snap-pixel
 
 info:
   name: >
-    Snap Pixel <= 1.5.7 - Authenticated (Administrator+) Stored Cross-Site Scripting
+    Snap Pixel <= 1.5.7 - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c37686f8-6bd7-4c06-b80a-7d6849bbc7b0?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6150fd60-069f-4ba6-8f0c-773039eaaec6?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/snap-pixel/"
     google-query: inurl:"/wp-content/plugins/snap-pixel/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,snap-pixel,low
+  tags: cve,wordpress,wp-plugin,snap-pixel,medium
 
 http:
   - method: GET

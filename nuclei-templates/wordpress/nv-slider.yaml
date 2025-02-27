@@ -2,14 +2,14 @@ id: nv-slider
 
 info:
   name: >
-    NV Slider <= 1.6 - Cross-Site Request Forgery to Stored Cross-Site Scripting
+    NV Slider <= 1.6 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a1b0d129-1070-4399-8a1e-3d3ad34dc1a2?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/548c3145-eafd-40b0-ada9-eec4406c4169?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/nv-slider/"
     google-query: inurl:"/wp-content/plugins/nv-slider/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,nv-slider,medium
+  tags: cve,wordpress,wp-plugin,nv-slider,low
 
 http:
   - method: GET

@@ -2,14 +2,14 @@ id: waymark
 
 info:
   name: >
-    Waymark <= 1.4.1 - Reflected Cross-Site Scripting via 'content'
+    Waymark <= 1.5.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e4f24b32-58a0-4b10-b8ff-65e574966b6e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1abee6b1-618b-491c-8017-d74e43c6aa47?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/waymark/"
     google-query: inurl:"/wp-content/plugins/waymark/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,waymark,medium
+  tags: cve,wordpress,wp-plugin,waymark,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.1')
+          - compare_versions(version, '<= 1.5.0')

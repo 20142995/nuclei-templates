@@ -2,14 +2,14 @@ id: zoho-crm-forms
 
 info:
   name: >
-    Zoho CRM Lead Magnet  <= 1.7.5.8 - Missing Authorization to Authenticated (Subscriber+) Arbitrary Options Update
+    Zoho CRM Lead Magnet <= 1.7.2.4 - Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/57caddaa-c548-4f07-ab34-327df62951b5?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/54a610c6-2615-4900-bf63-8ae93aeabb8e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/zoho-crm-forms/"
     google-query: inurl:"/wp-content/plugins/zoho-crm-forms/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,zoho-crm-forms,low
+  tags: cve,wordpress,wp-plugin,zoho-crm-forms,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.7.5.8')
+          - compare_versions(version, '<= 1.7.2.4')

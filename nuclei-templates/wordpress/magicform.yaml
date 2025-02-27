@@ -2,14 +2,14 @@ id: magicform
 
 info:
   name: >
-    MagicForm - WordPress Form Builder <= 1.6.2 - Missing Authorization
+    MagicForm <= 0.1 - Cross-Site Scripting
   author: topscoder
   severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/aa3497ae-7f3a-4e67-ad7a-77b50dccaf3b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/21c31df6-7515-48f5-ad74-fe116e836da8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.6.2')
+          - compare_versions(version, '<= 0.1')

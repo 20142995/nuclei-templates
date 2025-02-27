@@ -2,14 +2,14 @@ id: svs-pricing-tables
 
 info:
   name: >
-    SVS Pricing Tables <= 1.0.4 - Cross-Site Request Forgery to Pricing Table Deletion
+    SVS Pricing Tables <= 1.0.4 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e7a24213-5191-4b6d-a2d1-7b79729e6517?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/655b35a7-a532-4ceb-aa02-4a8192e6449d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/svs-pricing-tables/"
     google-query: inurl:"/wp-content/plugins/svs-pricing-tables/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,svs-pricing-tables,medium
+  tags: cve,wordpress,wp-plugin,svs-pricing-tables,low
 
 http:
   - method: GET

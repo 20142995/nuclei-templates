@@ -1,23 +1,24 @@
 id: clean-login
 
 info:
-  name: "Clean Login 1.12.6.3 - Cross-Site Scripting"
+  name: >
+    Clean Login <= 1.14.5 - Authenticated (Contributor+) Local File Inclusion
   author: topscoder
-  severity: medium
-  description: "The Clean Login for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘url’ parameter in version 1.12.6.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  severity: low
+  description: >
+    
   reference:
-    - https://ithemes.com/blog/wordpress-vulnerability-report-august-2021-part-3/
-    - https://wpscan.com/vulnerability/6782ee79-6930-4a40-b416-d2248f78d995
-    - https://plugins.trac.wordpress.org/changeset/2579661
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b9f99b51-e1b1-4cd3-a9f7-24e4b59811a7?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/clean-login/"
     google-query: inurl:"/wp-content/plugins/clean-login/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,clean-login,medium
+  tags: cve,wordpress,wp-plugin,clean-login,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '>= 1.12.6.3', '<= 1.12.6.3')
+          - compare_versions(version, '<= 1.14.5')

@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: splunk
         subtemplates:
-          -
+          - tags: splunk

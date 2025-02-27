@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: lanproxy
         subtemplates:
-          -
+          - tags: lanproxy

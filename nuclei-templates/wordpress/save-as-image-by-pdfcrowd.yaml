@@ -2,14 +2,14 @@ id: save-as-image-by-pdfcrowd
 
 info:
   name: >
-    Save as Image  <= 3.2.1 - Authenticated (Admin+) Stored Cross-Site Scripting
+    Save as Image plugin by Pdfcrowd <= 2.16.0 - Authenticated (Administrator+) Stored Cross-Site Scripting via settings
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fb1693c7-4c38-4723-868a-9f105dac1561?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/74b284b7-ec0a-42c1-82e5-0c8cb422c0c5?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.2.1')
+          - compare_versions(version, '<= 2.16.0')

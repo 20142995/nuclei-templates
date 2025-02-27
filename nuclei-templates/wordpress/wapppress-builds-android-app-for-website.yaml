@@ -2,14 +2,14 @@ id: wapppress-builds-android-app-for-website
 
 info:
   name: >
-    WappPress <= 6.0.4 - Authenticated (Subscriber+) Server-Side Request Forgery
+    WappPress <= 6.0.4 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7acb52d3-7bed-40fb-95dc-ad0bf262649b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/61771b13-4554-49b8-8829-6345174c4a69?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

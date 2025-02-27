@@ -2,14 +2,14 @@ id: userfeedback-lite
 
 info:
   name: >
-    User Feedback <= 1.0.7 - Unauthenticated Stored Cross-Site Scripting
+    UserFeedback Lite <= 1.0.15 - Unauthenticated Stored Cross-Site Scripting via Name Parameter
   author: topscoder
   severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f9e45bc2-6db6-49cd-8a4a-58489a8ddac2?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bce9ba42-f574-47c1-9ea5-1e56f9da8e71?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.7')
+          - compare_versions(version, '<= 1.0.15')

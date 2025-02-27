@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: phpwiki
         subtemplates:
-          -
+          - tags: phpwiki

@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: saltstack
         subtemplates:
-          -
+          - tags: saltstack

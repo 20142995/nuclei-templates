@@ -1,16 +1,19 @@
 id: wp-optimize
 
 info:
-  name: "WP-Optimize <= 3.2.11 - Cross-Site Request Forgery"
+  name: >
+    WP-Optimize <= 3.2.11 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
-  description: "The WP-Optimize plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 3.2.11. This is due to missing or incorrect nonce validation on the 'is_valid_request' function. This makes it possible for unauthenticated attackers to manage and modify cache and minification settings and dismiss notifications via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+  description: >
+    
   reference:
-
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c3190f9f-8b2f-4251-8804-f386e2c5678f?source=api-scan
   classification:
-    cvss-metrics:
-    cvss-score:
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-optimize/"
     google-query: inurl:"/wp-content/plugins/wp-optimize/"
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<=  3.2.11')
+          - compare_versions(version, '<= 3.2.11')

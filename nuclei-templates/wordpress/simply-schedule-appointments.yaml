@@ -2,14 +2,14 @@ id: simply-schedule-appointments
 
 info:
   name: >
-    Appointment Booking Calendar <= - Authenticated (Admin+) Stored Cross-Site Scripting via Notification Settings
+    Simply Schedule Appointments <= 1.6.6.20 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0e170f98-692b-48f1-92b0-530cbe21440b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4291b5c8-cce3-46ae-b9ff-a34a0f5bcdce?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/simply-schedule-appointments/"
     google-query: inurl:"/wp-content/plugins/simply-schedule-appointments/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simply-schedule-appointments,low
+  tags: cve,wordpress,wp-plugin,simply-schedule-appointments,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.6.7.53')
+          - compare_versions(version, '<= 1.6.6.20')

@@ -2,14 +2,14 @@ id: profit-products-tables-for-woocommerce
 
 info:
   name: >
-    Active Products Tables for WooCommerce. Use constructor to create tables <= 1.0.6.6 - Reflected Cross-Site Scripting
+    Active Products Tables for WooCommerce. Use constructor to create tables  <= 1.0.6.3 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f93dcb51-1caf-4d63-a8f3-f6251dd0d19f?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b899296a-01df-45af-b966-2b80685c6853?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.6.6')
+          - compare_versions(version, '<= 1.0.6.3')

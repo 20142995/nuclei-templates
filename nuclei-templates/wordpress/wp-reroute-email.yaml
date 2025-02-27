@@ -2,14 +2,14 @@ id: wp-reroute-email
 
 info:
   name: >
-    WP Reroute Email <= 1.4.9 - Unauthenticated Stored Cross-Site Scripting via Email Subject
+    WP Reroute Email <= 1.4.6 - Cross-Site Request Forgery
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4a0e962b-b6a0-4179-91d0-5ede508a9895?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9c3a047f-be12-4308-a4a5-fbbbc37f674d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-reroute-email/"
     google-query: inurl:"/wp-content/plugins/wp-reroute-email/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-reroute-email,high
+  tags: cve,wordpress,wp-plugin,wp-reroute-email,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.9')
+          - compare_versions(version, '<= 1.4.6')

@@ -2,14 +2,14 @@ id: wp-auctions
 
 info:
   name: >
-    WordPress Auction Plugin <= 3.7 - Unauthenticated SQL Injection
+    WordPress Auction Plugin <= 3.7 - Authenticated (Editor+) SQL Injection
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9c2e8932-f207-40f2-85c9-5d1f28f859f2?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0cd62935-f865-43ff-b727-f17b6fc5976d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-auctions/"
     google-query: inurl:"/wp-content/plugins/wp-auctions/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-auctions,critical
+  tags: cve,wordpress,wp-plugin,wp-auctions,low
 
 http:
   - method: GET

@@ -2,14 +2,14 @@ id: vk-all-in-one-expansion-unit
 
 info:
   name: >
-    VK All in One Expansion Unit <= 9.98.1.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    VK All in One Expansion Unit <= 9.85.0.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a8b1feee-431f-4406-b7c0-a7e71cb5f179?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c1f10e67-d301-46ba-b92e-432819cb9606?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 9.98.1.0')
+          - compare_versions(version, '<= 9.85.0.1')

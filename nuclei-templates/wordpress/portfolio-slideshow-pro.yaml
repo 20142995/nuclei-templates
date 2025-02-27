@@ -1,16 +1,19 @@
 id: portfolio-slideshow-pro
 
 info:
-  name: "Portfolio Slideshow Pro <= 3.0 - SQL Injection"
+  name: >
+    Portfolio Slideshow Pro <= 3.0 - SQL Injection
   author: topscoder
   severity: critical
-  description: "The Portfolio Slideshow Pro plugin for WordPress is vulnerable to generic SQL Injection via the ‘id’ parameter in all versions due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
+  description: >
+    
   reference:
-    - https://cxsecurity.com/issue/WLB-2013010236
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b6cab377-0a8a-45d2-a966-4c7f100b9409?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/portfolio-slideshow-pro/"
     google-query: inurl:"/wp-content/plugins/portfolio-slideshow-pro/"
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '>0')
+          - compare_versions(version, '<= *')

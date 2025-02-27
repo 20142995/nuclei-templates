@@ -2,14 +2,14 @@ id: table-of-contents-plus
 
 info:
   name: >
-    Table of Contents Plus <= 2408 - Authenticated (Editor+) Stored Cross-Site Scripting
+    Table of Contents Plus <= 2302 - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9e1ae8f2-dd2e-46f9-bef1-aaaee26435a1?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/624a3174-03fa-4a8e-9c02-5e24add92392?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/table-of-contents-plus/"
     google-query: inurl:"/wp-content/plugins/table-of-contents-plus/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,table-of-contents-plus,low
+  tags: cve,wordpress,wp-plugin,table-of-contents-plus,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2408')
+          - compare_versions(version, '<= 2302')

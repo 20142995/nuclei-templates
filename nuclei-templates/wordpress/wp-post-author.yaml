@@ -2,14 +2,14 @@ id: wp-post-author
 
 info:
   name: >
-    WP Post Author – Enhance Your Posts with the Author Bio, Co-Authors, Guest Authors, and Post Rating System, including User Registration Form Builder <= 3.6.4 - Missing Authorization to Rating Manipulation
+    WP Post Author <= 3.8.2 - Authenticated (Administrator+) SQL Injection
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4a82a3b7-eb05-4f52-84b7-f1a97dddedf9?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/935171a3-9db0-4b01-babb-fa0b3d8985f6?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-post-author/"
     google-query: inurl:"/wp-content/plugins/wp-post-author/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-post-author,high
+  tags: cve,wordpress,wp-plugin,wp-post-author,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.6.4')
+          - compare_versions(version, '<= 3.8.2')

@@ -2,14 +2,14 @@ id: instant-appointment
 
 info:
   name: >
-    Instant Appointment <= 1.2 - Unauthenticated SQL Injection
+    Instant Appointment <= 1.2 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fed758e0-7fea-4b6a-9157-47f5603be2c9?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5af3acba-9620-4038-bc0c-4be1596573ff?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/instant-appointment/"
     google-query: inurl:"/wp-content/plugins/instant-appointment/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,instant-appointment,critical
+  tags: cve,wordpress,wp-plugin,instant-appointment,medium
 
 http:
   - method: GET

@@ -2,14 +2,14 @@ id: wp-remote-users-sync
 
 info:
   name: >
-    WP Remote Users Sync <= 1.2.11 - Missing Authorization to Authenticated (Subscriber+) Log View
+    WP Remote Users Sync <= 1.2.12 - Authenticated (Subscriber+) Server Side Request Forgery
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2e87cfc4-8e7c-47d6-80fc-9c293cdd8acb?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2e78c759-4a54-4ee4-8eff-df91fe9dad46?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.11')
+          - compare_versions(version, '<= 1.2.12')

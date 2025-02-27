@@ -2,14 +2,14 @@ id: ctt-expresso-para-woocommerce
 
 info:
   name: >
-    CTT Expresso para WooCommerce <= 3.2.12 - Information Exposure via Unprotected Directory
+    CTT Expresso para WooCommerce <= 3.2.11 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/13088645-8233-40fb-8755-cbdf44c0eaf7?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/598768fe-e36d-48d8-925e-64513f36b18b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.2.12')
+          - compare_versions(version, '<= 3.2.11')

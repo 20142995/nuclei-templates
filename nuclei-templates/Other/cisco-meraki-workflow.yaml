@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: meraki
         subtemplates:
-          -
+          - tags: meraki

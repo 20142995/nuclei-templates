@@ -2,14 +2,14 @@ id: wp-bibtex
 
 info:
   name: >
-    WP-BibTeX <= 3.0.1 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    WP-BibTeX <= 3.0.1 - Cross-Site Request Forgery to Stored and Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2011db9d-7237-4843-8c15-63b8fb60de5d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/077538e2-ef9a-490f-9188-31f9cb82aaf7?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-bibtex/"
     google-query: inurl:"/wp-content/plugins/wp-bibtex/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-bibtex,low
+  tags: cve,wordpress,wp-plugin,wp-bibtex,medium
 
 http:
   - method: GET

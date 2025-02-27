@@ -1,19 +1,16 @@
 id: shapepress-dsgvo
 
 info:
-  name: >
-    WP DSGVO Tools (GDPR) <= 3.1.23 - Unauthenticated Stored Cross-Site Scripting
+  name: "WP DSGVO Tools (GDPR) <= 3.1.23 - Unauthenticated Stored Cross-Site Scripting"
   author: topscoder
   severity: high
-  description: >
-    
+  description: "The WP DSGVO Tools (GDPR) plugin for WordPress is vulnerable to Stored Cross-Site Scripting via an unknown parameter in versions up to, and including, 3.1.23 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6c18ab1b-02f1-4679-8cff-679d98dc9f4a?source=api-scan
+
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics:
+    cvss-score:
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/shapepress-dsgvo/"
     google-query: inurl:"/wp-content/plugins/shapepress-dsgvo/"
@@ -56,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.1.24')
+          - compare_versions(version, '<= 3.1.24')

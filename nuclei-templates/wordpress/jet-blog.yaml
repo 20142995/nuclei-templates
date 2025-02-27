@@ -2,14 +2,14 @@ id: jet-blog
 
 info:
   name: >
-    Multiple Plugins by Crocoblock <= (Various Versions) - Cross-Site Request Forgery
+    Multiple Plugins by Crocoblock <= (Various Versions) - Missing Authorization
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1c85e5e0-d8ee-46d3-99b1-df6c6744f020?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/893500ba-cc16-4429-bbe1-725aa65589c9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/jet-blog/"
     google-query: inurl:"/wp-content/plugins/jet-blog/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,jet-blog,medium
+  tags: cve,wordpress,wp-plugin,jet-blog,high
 
 http:
   - method: GET

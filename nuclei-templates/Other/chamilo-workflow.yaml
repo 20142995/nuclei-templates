@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: chamilo
         subtemplates:
-          -
+          - tags: chamilo

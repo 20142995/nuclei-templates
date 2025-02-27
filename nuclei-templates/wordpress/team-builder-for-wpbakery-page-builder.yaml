@@ -2,14 +2,14 @@ id: team-builder-for-wpbakery-page-builder
 
 info:
   name: >
-    Team Builder For WPBakery Page Builder(Formerly Visual Composer) <= 1.0 - Authenticated (Contributor+) Local File Inclusion
+    Team Builder For WPBakery Page Builder(Formerly Visual Composer) <= 1.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ee7e8d76-a461-4b0b-a312-c6ea4b8ac375?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e6b1e4d9-03dc-47e8-ab41-ae9c04dc0132?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

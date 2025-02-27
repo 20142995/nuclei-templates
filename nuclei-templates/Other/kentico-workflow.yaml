@@ -10,4 +10,4 @@ workflows:
     matchers:
       - name: kentico
         subtemplates:
-          -
+          - tags: kentico

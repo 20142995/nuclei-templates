@@ -2,14 +2,14 @@ id: wp-latest-posts
 
 info:
   name: >
-    WP Latest Posts <= 3.7.4 - Reflected Cross-Site Scripting
+    WP Latest Posts <= 5.0.7  - Authenticated (Subscriber+) Arbitrary Shortcode Execution
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/942aad86-787e-4c25-a98b-9b7fe64aec23?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/57d90ba7-b655-4655-981c-548ff96c3bb7?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-latest-posts/"
     google-query: inurl:"/wp-content/plugins/wp-latest-posts/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-latest-posts,medium
+  tags: cve,wordpress,wp-plugin,wp-latest-posts,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.7.4')
+          - compare_versions(version, '<= 5.0.7')

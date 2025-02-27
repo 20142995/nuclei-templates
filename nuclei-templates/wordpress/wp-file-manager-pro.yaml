@@ -2,14 +2,14 @@ id: wp-file-manager-pro
 
 info:
   name: >
-    File Manager Pro <= 8.3.4 - Authenticated (Subscriber+) Arbitrary File Upload
+    File Manager Pro <= 8.3.9 - Cross-Site Request Forgery to Arbitrary File Upload
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1e8e0257-a745-495f-a103-c032b95209fc?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/db70b37c-707a-47b8-a3a2-5a2b7d30de89?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-file-manager-pro/"
     google-query: inurl:"/wp-content/plugins/wp-file-manager-pro/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-file-manager-pro,low
+  tags: cve,wordpress,wp-plugin,wp-file-manager-pro,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 8.3.4')
+          - compare_versions(version, '<= 8.3.9')

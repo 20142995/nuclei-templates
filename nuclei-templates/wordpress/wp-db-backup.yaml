@@ -2,14 +2,14 @@ id: wp-db-backup
 
 info:
   name: >
-    Database Backup for WordPress <= 2.3.3 - Authenticated Stored Cross-Site Scripting via backup_receipient Parameter
+    Database Backup for WordPress <= 2.5.1 - Cross-Site Request Forgery to Settings Update
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/453c656a-c26d-44c3-bc7d-7fc502a00b03?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/211350ac-24c4-4aa7-aea6-5dc44f753185?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-db-backup/"
     google-query: inurl:"/wp-content/plugins/wp-db-backup/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-db-backup,low
+  tags: cve,wordpress,wp-plugin,wp-db-backup,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.4')
+          - compare_versions(version, '< 2.5.2')

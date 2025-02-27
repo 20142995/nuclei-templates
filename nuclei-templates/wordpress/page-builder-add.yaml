@@ -2,14 +2,14 @@ id: page-builder-add
 
 info:
   name: >
-    Landing Page Builder <= 1.5.1.8 - Reflected Cross-Site Scripting via pageType
+    Landing Page Builder <= 1.4.9.8.9  - Authenticated (Contributor+) Cross-Site Scripting via Shortcode
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/156b9e3f-0a99-4fbc-88a4-1ed5e5e6b896?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4cb3f111-4ac3-4c57-aa62-569b71143fec?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/page-builder-add/"
     google-query: inurl:"/wp-content/plugins/page-builder-add/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,page-builder-add,medium
+  tags: cve,wordpress,wp-plugin,page-builder-add,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.5.1.8')
+          - compare_versions(version, '<= 1.4.9.8.9')

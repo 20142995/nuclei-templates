@@ -2,14 +2,14 @@ id: bello
 
 info:
   name: >
-    Directory & Listing < 1.6.0 - Reflected Cross-Site Scripting
+    Bello - Directory & Listing  - < 1.6.0 - Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/349e3b4a-c46b-48f6-acf7-bcdc86c13db7?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c2f10cc4-82a8-4668-b1e5-a08a0f79b59c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/themes/bello/"
     google-query: inurl:"/wp-content/themes/bello/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,bello,medium
+  tags: cve,wordpress,wp-theme,bello,high
 
 http:
   - method: GET

@@ -2,14 +2,14 @@ id: wp-register-profile-with-shortcode
 
 info:
   name: >
-    WP Register Profile With Shortcode <= 3.5.9 - Cross-Site Request Forgery to User Password Reset
+    WP Register Profile With Shortcode <= 3.5.7 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ca564941-4780-4da2-b937-c9bd45966d81?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0c20f87e-3670-444c-aa8a-28988dfe2fd9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-register-profile-with-shortcode/"
     google-query: inurl:"/wp-content/plugins/wp-register-profile-with-shortcode/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-register-profile-with-shortcode,medium
+  tags: cve,wordpress,wp-plugin,wp-register-profile-with-shortcode,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.5.9')
+          - compare_versions(version, '<= 3.5.7')

@@ -2,14 +2,14 @@ id: searchterms-tagging-2
 
 info:
   name: >
-    searchterms-tagging-2 <= 1.535 - Reflected Cross-Site Scripting
+    SEO SearchTerms Tagging 2 <=1.535 - SQL Injection
   author: topscoder
-  severity: medium
+  severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bb2df482-30bf-49e5-b1e2-06e102d2dd1b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e18b3a85-9d4a-4af8-9a73-1f8794ad467b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/searchterms-tagging-2/"
     google-query: inurl:"/wp-content/plugins/searchterms-tagging-2/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,searchterms-tagging-2,medium
+  tags: cve,wordpress,wp-plugin,searchterms-tagging-2,critical
 
 http:
   - method: GET

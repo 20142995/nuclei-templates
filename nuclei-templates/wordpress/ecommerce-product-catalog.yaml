@@ -2,14 +2,14 @@ id: ecommerce-product-catalog
 
 info:
   name: >
-    eCommerce Product Catalog plugin for WordPress <= 3.3.8 - Authenticated (Administrator+) Stored Cross-Site Scripting
+    eCommerce Product Catalog <= 3.0.71 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/26b7438e-438b-41eb-9458-2fba8ab1964d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/56abcad2-5be0-422c-a33f-91bc123364e5?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/ecommerce-product-catalog/"
     google-query: inurl:"/wp-content/plugins/ecommerce-product-catalog/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ecommerce-product-catalog,low
+  tags: cve,wordpress,wp-plugin,ecommerce-product-catalog,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.3.8')
+          - compare_versions(version, '<= 3.0.71')

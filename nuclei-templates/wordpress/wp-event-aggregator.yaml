@@ -2,14 +2,14 @@ id: wp-event-aggregator
 
 info:
   name: >
-    WP Event Aggregator <= 1.7.9 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    WP Event Aggregator <= 1.7.6 - Cross-Site Request Forgery via wpea_deauthorize_user()
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/76c8ffac-6971-4161-bd83-f53f6c6158db?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7b26e5f7-bd35-4412-a608-9cdfeff0b025?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-event-aggregator/"
     google-query: inurl:"/wp-content/plugins/wp-event-aggregator/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-event-aggregator,low
+  tags: cve,wordpress,wp-plugin,wp-event-aggregator,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.7.9')
+          - compare_versions(version, '<= 1.7.6')

@@ -2,14 +2,14 @@ id: stripe-payments
 
 info:
   name: >
-    Accept Stripe Payments <= 2.0.79 - Insecure Direct Object Reference
+    Accept Stripe Payments <= 2.0.63 - Authenticated Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/44d14692-d90a-45f9-afb4-0666ce4b3397?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/82fb1ea4-12cc-4c8c-b51e-cf878a791d0e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.79')
+          - compare_versions(version, '<= 2.0.63')

@@ -2,14 +2,14 @@ id: posterity
 
 info:
   name: >
-    Posterity <= 3.3 - Cross-Site Request Forgery to Notice Dismissal
+    Posterity <= 3.6 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1b2b49af-1bed-4c81-95c2-f8b80c06a829?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5f6eba90-3e9d-48d0-aae2-81ff216315da?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/themes/posterity/"
     google-query: inurl:"/wp-content/themes/posterity/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,posterity,medium
+  tags: cve,wordpress,wp-theme,posterity,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.3')
+          - compare_versions(version, '<= 3.6')

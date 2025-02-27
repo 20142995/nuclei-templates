@@ -2,14 +2,14 @@ id: gpt3-ai-content-generator
 
 info:
   name: >
-    AI Power: Complete AI Pack <= 1.8.96 - Authenticated (Subscriber+) Server-Side Request Forgery
+    AI Power: Complete AI Pack <= 1.8.96 - Authenticated (Admin+) PHP Object Injection via wpaicg_export_ai_forms
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5cf6cbba-0e0c-4d2c-90d0-d7e0a5222df2?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bb927aba-a96d-47b9-ba35-60945ea5cfe5?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

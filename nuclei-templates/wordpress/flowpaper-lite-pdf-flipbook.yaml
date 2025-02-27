@@ -2,14 +2,14 @@ id: flowpaper-lite-pdf-flipbook
 
 info:
   name: >
-    flowpaper <= 2.0.3 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
+    flowpaper <= 1.9.9 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/31d6288d-87f0-4822-b3f4-541f70cf99fd?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e59b75cf-491a-4894-8a4a-567832b47048?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.3')
+          - compare_versions(version, '<= 1.9.9')

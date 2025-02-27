@@ -2,14 +2,14 @@ id: wpstream
 
 info:
   name: >
-    WpStream – Live Streaming, Video on Demand, Pay Per View <= 4.4.10 - Cross-Site Request Forgery via wpstream_settings
+    WpStream – Live Streaming, Video on Demand, Pay Per View <= 4.5.4 - Cross-Site Request Forgery via wpstream_update_local_event_settings
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0219851f-7fce-42e0-ba82-77af84b17d9f?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d0c91a58-31e9-4f6e-81fb-0681fb9ce4d6?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.4.10')
+          - compare_versions(version, '<= 4.5.4')

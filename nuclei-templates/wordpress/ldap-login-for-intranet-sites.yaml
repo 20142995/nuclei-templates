@@ -2,14 +2,14 @@ id: ldap-login-for-intranet-sites
 
 info:
   name: >
-    Active Directory Integration / LDAP Integration <= 4.1.10 - LDAP Passback
+    Active Directory Integration / LDAP Integration <= 4.1.5 - Authenticated (Subscriber+) LDAP Injection
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0585969d-dd08-4058-9d72-138a55a2cdf1?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cd7553e8-e43d-4740-b2ee-e3d8dc351e53?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.1.10')
+          - compare_versions(version, '<= 4.1.5')

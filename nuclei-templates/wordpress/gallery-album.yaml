@@ -2,14 +2,14 @@ id: gallery-album
 
 info:
   name: >
-    Responsive Image Gallery, Gallery Album <= 2.0.3 - Unauthenticated Cross-Site Scripting
+    Responsive Image Gallery, Gallery Album <= 2.0.3 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fa9e4635-43f8-4f3c-b62c-628e74028f7e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1e07593a-3d12-4afe-a21e-fc85bd6d4bef?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/gallery-album/"
     google-query: inurl:"/wp-content/plugins/gallery-album/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,gallery-album,high
+  tags: cve,wordpress,wp-plugin,gallery-album,medium
 
 http:
   - method: GET

@@ -1,24 +1,24 @@
 id: mailchimp-subscribe-sm
 
 info:
-  name: >
-    MailChimp Subscribe Form, Optin Builder, PopUp Builder, Form Builder < 1.2 - Remote Code Execution
+  name: "MailChimp Subscribe Form, Optin Builder, PopUp Builder, Form Builder < 1.2 - Remote Code Execution"
   author: topscoder
-  severity: low
-  description: >
-    The MailChimp Subscribe Form, Optin Builder, PopUp Builder, Form Builder theme for WordPress is vulnerable to Remote Code Execution in versions before 1.2 via the email field. This allows authenticated attackers to execute code on the server.
+  severity: high
+  description: "The MailChimp Subscribe Form, Optin Builder, PopUp Builder, Form Builder theme for WordPress is vulnerable to Remote Code Execution in versions before 1.2 via the email field. This allows authenticated attackers to execute code on the server."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/680746a3-8a72-4ec2-9f58-d744f40168ed?source=api-prod
+    - https://plugins.trac.wordpress.org/browser/mailchimp-subscribe-sm/tags/1.1/data.php?rev=1128995
+    - https://plugins.trac.wordpress.org/browser/mailchimp-subscribe-sm/tags/1.2/data.php?rev=1128995
+    - https://packetstormsecurity.com/files/132035/
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=1128995%40mailchimp-subscribe-sm&old=983904%40mailchimp-subscribe-sm&sfp_email=&sfph_mail=
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 8.8
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/mailchimp-subscribe-sm/"
     google-query: inurl:"/wp-content/plugins/mailchimp-subscribe-sm/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,mailchimp-subscribe-sm,low
+  tags: cve,wordpress,wp-plugin,mailchimp-subscribe-sm,high
 
 http:
   - method: GET

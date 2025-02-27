@@ -2,14 +2,14 @@ id: yphplista
 
 info:
   name: >
-    yPHPlista <= 1.1.1 - Cross-Site Request Forgery to Stored Cross-Site Scripting
+    yPHPlista <= 1.1.1 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3044bd14-b914-4a2a-8e45-1129ac25a38a?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6ba2738c-c1dd-4d4f-ab11-6c739e53c4a6?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/yphplista/"
     google-query: inurl:"/wp-content/plugins/yphplista/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,yphplista,medium
+  tags: cve,wordpress,wp-plugin,yphplista,low
 
 http:
   - method: GET

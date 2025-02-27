@@ -2,14 +2,14 @@ id: wp-user-extra-fields
 
 info:
   name: >
-    WordPress User Extra Fields <= 16.6 - Unauthenticated Arbitrary File Deletion
+    WordPress User Extra Fields <= 16.5 - Unauthenticated Arbitrary File Upload
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ad39d797-9230-41d9-a335-864845b56aa0?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6a60e2c3-4597-4b21-ad20-6a00e483fcf1?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-user-extra-fields/"
     google-query: inurl:"/wp-content/plugins/wp-user-extra-fields/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-user-extra-fields,low
+  tags: cve,wordpress,wp-plugin,wp-user-extra-fields,critical
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 16.6')
+          - compare_versions(version, '<= 16.5')

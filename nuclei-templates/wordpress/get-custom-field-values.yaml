@@ -2,14 +2,14 @@ id: get-custom-field-values
 
 info:
   name: >
-    Get Custom Field Values <= 4.0.0 - Contributor+ Stored Cross-Site Scripting
+    Get Custom Field Values < 4.0 - Arbitrary Post Metadata Access
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8d52779e-3c86-4823-af0e-6f8d55d35e90?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8ff1ca68-7c71-4442-b27f-12743fc39b37?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/get-custom-field-values/"
     google-query: inurl:"/wp-content/plugins/get-custom-field-values/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,get-custom-field-values,high
+  tags: cve,wordpress,wp-plugin,get-custom-field-values,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 4.0.1')
+          - compare_versions(version, '< 4.0')

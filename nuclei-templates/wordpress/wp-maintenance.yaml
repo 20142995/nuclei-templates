@@ -2,14 +2,14 @@ id: wp-maintenance
 
 info:
   name: >
-    WP Maintenance <= 6.1.6 - Information Exposure
+    WP Maintenance <= 5.0.5 - Cross-Site Request Forgery to Stored Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/645328f3-2bcb-4287-952c-2e23ec57bb4e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5f2fa602-79db-4bb3-a55c-75da59116f06?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-maintenance/"
     google-query: inurl:"/wp-content/plugins/wp-maintenance/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-maintenance,low
+  tags: cve,wordpress,wp-plugin,wp-maintenance,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 6.1.6')
+          - compare_versions(version, '<= 5.0.5')

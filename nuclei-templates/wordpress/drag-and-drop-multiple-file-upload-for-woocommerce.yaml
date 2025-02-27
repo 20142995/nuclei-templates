@@ -3,20 +3,19 @@ id: drag-and-drop-multiple-file-upload-for-woocommerce
 info:
   name: "Drag and Drop Multiple File Upload for WooCommerce <= 1.0.8 - Missing Authorization in upload and delete_file"
   author: topscoder
-  severity: medium
+  severity: high
   description: "The Drag and Drop Multiple File Upload for WooCommerce plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the upload and delete_file functions in versions up to, and including, 1.0.8. This makes it possible for authenticated attackers, with subscriber-level permissions, to perform an unauthorized file upload or delete files."
   reference:
-    - https://patchstack.com/database/vulnerability/drag-and-drop-multiple-file-upload-for-woocommerce/wordpress-drag-and-drop-multiple-file-upload-for-woocommerce-plugin-1-0-8-multiple-vulnerabilities
-    - https://plugins.trac.wordpress.org/changeset/2871426/drag-and-drop-multiple-file-upload-for-woocommerce?old=2862561
+
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
-    cvss-score: 6.5
+    cvss-metrics:
+    cvss-score:
     cve-id:
   metadata:
     fofa-query: "wp-content/plugins/drag-and-drop-multiple-file-upload-for-woocommerce/"
     google-query: inurl:"/wp-content/plugins/drag-and-drop-multiple-file-upload-for-woocommerce/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,drag-and-drop-multiple-file-upload-for-woocommerce,medium
+  tags: cve,wordpress,wp-plugin,drag-and-drop-multiple-file-upload-for-woocommerce,high
 
 http:
   - method: GET
@@ -54,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.8')
+          - compare_versions(version, '<=  1.0.8')

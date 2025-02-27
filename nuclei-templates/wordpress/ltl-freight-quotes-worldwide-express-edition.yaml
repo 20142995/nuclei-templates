@@ -2,14 +2,14 @@ id: ltl-freight-quotes-worldwide-express-edition
 
 info:
   name: >
-    LTL Freight Quotes - Worldwide Express Edition <= 5.0.20 - Unauthenticated SQL Injection
+    LTL Freight Quotes – Worldwide Express Edition <= 5.0.20 - Missing Authorization to Unauthenticated Arbitrary Content Deletion
   author: topscoder
-  severity: critical
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4e72828e-a6f6-43fc-8a10-d9908004c0fc?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8c26d080-978b-4a3d-827b-7e9712eb2aad?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/ltl-freight-quotes-worldwide-express-edition/"
     google-query: inurl:"/wp-content/plugins/ltl-freight-quotes-worldwide-express-edition/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ltl-freight-quotes-worldwide-express-edition,critical
+  tags: cve,wordpress,wp-plugin,ltl-freight-quotes-worldwide-express-edition,high
 
 http:
   - method: GET

@@ -5,19 +5,14 @@ info:
   tags: detect,tech,vicidial
   severity: info
   metadata:
-    fofa-query:
-    - icon_hash="1375401192"
     product: vicidial
-    vendor: vicidial
-    verified: true
+    vendor: 00_unknown
+    verified: false
 http:
 - method: GET
   path:
   - '{{BaseURL}}/'
   matchers:
-  - type: favicon
-    hash:
-    - '1375401192'
   - type: word
     words:
     - url=/vicidial/welcome.php

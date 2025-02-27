@@ -2,14 +2,14 @@ id: users-customers-import-export-for-wp-woocommerce
 
 info:
   name: >
-    WebToffee Plugins <= (Various Versions) - Arbitrary User Creation
+    Export and Import Users and Customers <= 2.4.8 - Authenticated (Shop Manager+) Arbitrary File Upload
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/27ac48a7-52ee-46cb-a6d0-efbd2b516445?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/55b3e2dc-dc4f-408b-bbc6-da72ed5ad245?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.3.9')
+          - compare_versions(version, '<= 2.4.8')

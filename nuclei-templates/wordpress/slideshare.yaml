@@ -1,16 +1,19 @@
 id: slideshare
 
 info:
-  name: "SlideShare for WordPress by Yoast <= 1.9.1 - Admin+ Cross-Site Scripting"
+  name: >
+    SlideShare for WordPress by Yoast <= 1.9.1 - Admin+ Cross-Site Scripting
   author: topscoder
   severity: high
-  description: "The SlideShare for WordPress by Yoast plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the $id variable in versions up to, and including, 1.9.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrative level capabilities, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  description: >
+    
   reference:
-
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/78f3e63b-1d60-47bb-9366-dbdd81d6ed19?source=api-scan
   classification:
-    cvss-metrics:
-    cvss-score:
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/slideshare/"
     google-query: inurl:"/wp-content/plugins/slideshare/"
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<=  1.9.1')
+          - compare_versions(version, '<= 1.9.1')

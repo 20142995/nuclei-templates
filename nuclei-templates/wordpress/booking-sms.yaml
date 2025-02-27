@@ -2,14 +2,14 @@ id: booking-sms
 
 info:
   name: >
-    Clockwork SMS Plugins - Multiple Versions - Cross-Site Scripting
+    Booking Calendar - Clockwork SMS <= 1.0.5 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d0f35a20-ffcf-4413-b1ea-748cd6aa6f20?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1cf44639-60ce-4a3c-aa4a-550dd9327039?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/booking-sms/"
     google-query: inurl:"/wp-content/plugins/booking-sms/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,booking-sms,high
+  tags: cve,wordpress,wp-plugin,booking-sms,medium
 
 http:
   - method: GET

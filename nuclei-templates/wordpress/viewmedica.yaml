@@ -2,14 +2,14 @@ id: viewmedica
 
 info:
   name: >
-    ViewMedica Embed <= 1.4.15 - Cross-Site Request Forgery to SQL Injection
+    ViewMedica 9 <= 1.4.15 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/58209530-9e68-4d2c-a723-e6a164db7f46?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b32c1b63-564c-4c38-a149-d5adabda8a8b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/viewmedica/"
     google-query: inurl:"/wp-content/plugins/viewmedica/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,viewmedica,medium
+  tags: cve,wordpress,wp-plugin,viewmedica,low
 
 http:
   - method: GET

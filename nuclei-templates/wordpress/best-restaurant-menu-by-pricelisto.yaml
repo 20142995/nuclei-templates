@@ -2,14 +2,14 @@ id: best-restaurant-menu-by-pricelisto
 
 info:
   name: >
-    Best Restaurant Menu by PriceListo <= 1.3.1 - Cross-Site Request Forgery via menu_page
+    Best Restaurant Menu by PriceListo <= 1.4.1 - Authenticated (Contributor+) SQL Injection
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1c24f881-52bc-4210-9037-bcdd1e4aa895?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a4059a0b-1446-4711-a47d-eb0107d58900?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/best-restaurant-menu-by-pricelisto/"
     google-query: inurl:"/wp-content/plugins/best-restaurant-menu-by-pricelisto/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,best-restaurant-menu-by-pricelisto,medium
+  tags: cve,wordpress,wp-plugin,best-restaurant-menu-by-pricelisto,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.3.1')
+          - compare_versions(version, '<= 1.4.1')

@@ -1,16 +1,19 @@
 id: nd-restaurant-reservations
 
 info:
-  name: "Restaurant Reservations <= 1.7 - SQL Injection"
+  name: >
+    Restaurant Reservations <= 1.7 - SQL Injection
   author: topscoder
   severity: critical
-  description: "The plugin Restaurant Reservations is vulnerable to SQL Injection via an several parameters in versions up to, and including, 1.7 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
+  description: >
+    
   reference:
-
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/635e02a8-42f3-4098-aa3e-839099f40bfb?source=api-scan
   classification:
-    cvss-metrics:
-    cvss-score:
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/nd-restaurant-reservations/"
     google-query: inurl:"/wp-content/plugins/nd-restaurant-reservations/"
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<=  1.7')
+          - compare_versions(version, '<= 1.7')

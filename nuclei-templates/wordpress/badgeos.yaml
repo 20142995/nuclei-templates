@@ -2,14 +2,14 @@ id: badgeos
 
 info:
   name: >
-    BadgeOS <= 3.7.1.6 - Authenticated (Subscriber+) Insecure Direct Object Reference to Arbitrary Post Title Overwrite
+    BadgeOS <= 3.7.1.6 - Missing Authorization
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5dae8e82-e252-48d9-ae1f-62acfcd17e2b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/515e62ba-c3b8-42d0-95e3-be347b8851a5?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/badgeos/"
     google-query: inurl:"/wp-content/plugins/badgeos/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,badgeos,low
+  tags: cve,wordpress,wp-plugin,badgeos,high
 
 http:
   - method: GET

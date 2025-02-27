@@ -2,14 +2,14 @@ id: vikrentcar
 
 info:
   name: >
-    VikRentCar Car Rental Management System <= 1.3.1 - Cross-Site Request Forgery
+    Vik Rent Car <= 1.1.6 - Cross-Site Request Forgery to Stored Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/232cdd3b-4683-4e95-bdfd-acf0f32aeb2a?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8a79fda3-44eb-41fd-b049-971b959daecf?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.3.1')
+          - compare_versions(version, '<= 1.1.6')

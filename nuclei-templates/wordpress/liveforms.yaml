@@ -2,14 +2,14 @@ id: liveforms
 
 info:
   name: >
-    WordPress Contact Form, Drag and Drop Form Builder Plugin – Live Forms < 3.2.0 - SQL Injection
+    WordPress Contact Form, Drag and Drop Form Builder Plugin – Live Forms <= 3.2.1 - Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/13b2fb59-35ef-40de-a48a-2972777d2682?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1f36ff03-b599-4f2c-859e-751ac51b652d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/liveforms/"
     google-query: inurl:"/wp-content/plugins/liveforms/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,liveforms,critical
+  tags: cve,wordpress,wp-plugin,liveforms,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.2.0')
+          - compare_versions(version, '< 3.4.0')

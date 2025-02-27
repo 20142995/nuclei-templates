@@ -2,14 +2,14 @@ id: partners
 
 info:
   name: >
-    Partners <= 0.2.0 - Unauthenticated PHP Object Injection
+    Partners <= 0.2.0 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6980248b-195d-4e03-853e-a767a9a4b513?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/36dbe59e-b368-42f1-b72b-54123de43434?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/partners/"
     google-query: inurl:"/wp-content/plugins/partners/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,partners,critical
+  tags: cve,wordpress,wp-plugin,partners,medium
 
 http:
   - method: GET

@@ -2,23 +2,23 @@ id: yikes-inc-easy-mailchimp-extender
 
 info:
   name: >
-    Easy Forms for Mailchimp <= 6.6.2 - Authenticated Cross-Site Scripting
+    Easy Forms for Mailchimp < 6.1 - Local File Inclusion
   author: topscoder
-  severity: low
+  severity: critical
   description: >
-    
+    The Easy Forms for Mailchimp for WordPress is vulnerable to Local File Inclusion in versions before 6.1 via the vulnerable parameter 'section'. This allows attackers to include and execute arbitrary files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where images and other “safe” file types can be uploaded and included.
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a7d0deb3-3d04-4f85-b769-0894d7c6ee7c?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d4bbb00b-4baf-4dc1-85ab-3ca3d59eaf33?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H
+    cvss-score: 9.1
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/yikes-inc-easy-mailchimp-extender/"
     google-query: inurl:"/wp-content/plugins/yikes-inc-easy-mailchimp-extender/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,yikes-inc-easy-mailchimp-extender,low
+  tags: cve,wordpress,wp-plugin,yikes-inc-easy-mailchimp-extender,critical
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 6.6.3')
+          - compare_versions(version, '< 6.1')

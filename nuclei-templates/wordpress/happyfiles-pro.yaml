@@ -2,14 +2,14 @@ id: happyfiles-pro
 
 info:
   name: >
-    HappyFiles Pro <= 1.8.1 - Missing Authorization
+    HappyFiles Pro <= 1.8.1 - Missing Authorization to Arbitrary File Deletion
   author: topscoder
   severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d293f35a-a42f-441f-b521-da0ba9887c45?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7bfabeb4-c57d-412a-b27b-a6387d30081f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

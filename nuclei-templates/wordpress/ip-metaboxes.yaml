@@ -2,14 +2,14 @@ id: ip-metaboxes
 
 info:
   name: >
-    IP Metaboxes <= 2.1.1 -  Unauthenticated Stored Cross-Site Scripting
+    IP Metaboxes <= 2.1.1 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9163861b-735b-4007-97f7-8f9095d93ec9?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f611d609-97c5-4b77-9657-c8d9d10e786a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/ip-metaboxes/"
     google-query: inurl:"/wp-content/plugins/ip-metaboxes/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ip-metaboxes,high
+  tags: cve,wordpress,wp-plugin,ip-metaboxes,medium
 
 http:
   - method: GET
