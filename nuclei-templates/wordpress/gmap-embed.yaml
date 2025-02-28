@@ -2,14 +2,14 @@ id: gmap-embed
 
 info:
   name: >
-    WP Google Map <= 1.8.3 - Arbitrary Post Deletion and Plugin Settings Update via Cross-Site Request Forgery
+    Maps Plugin using Google Maps for WordPress – WP Google Map <= 1.9.3 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a7af6721-4886-4bec-8931-992881310f26?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fea688c7-88d6-424b-90e2-f82eb37c5a0e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/gmap-embed/"
     google-query: inurl:"/wp-content/plugins/gmap-embed/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,gmap-embed,medium
+  tags: cve,wordpress,wp-plugin,gmap-embed,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.8.3')
+          - compare_versions(version, '<= 1.9.3')

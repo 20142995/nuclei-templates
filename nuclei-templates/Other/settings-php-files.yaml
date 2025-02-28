@@ -1,9 +1,11 @@
 id: settings-php-files
+
 info:
   name: settings.php information disclosure
   author: sheikhrishad
   severity: medium
   tags: exposure,backup
+
 requests:
   - method: GET
     path:
@@ -13,6 +15,7 @@ requests:
       - "{{BaseURL}}/settings.php.save"
       - "{{BaseURL}}/settings.php.swp"
       - "{{BaseURL}}/settings.php.txt"
+
     matchers-condition: and
     matchers:
       - type: word
@@ -20,6 +23,7 @@ requests:
           - "DB_NAME"
           - "DB"
         condition: and
+
       - type: status
         status:
           - 200

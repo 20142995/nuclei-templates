@@ -1,17 +1,14 @@
 id: couchdb-exposure
 
 info:
-  name: couchdb exposure
-  author: organiccrap
+  name: Apache CouchDB Exposure
+  author: pd-team
   severity: low
-  tags: panel,couchdb
 
 requests:
   - method: GET
     path:
       - '{{BaseURL}}/_all_dbs'
-
-    matchers-condition: and
     matchers:
       - type: word
         words:
@@ -19,7 +16,3 @@ requests:
           - Erlang OTP/
         part: header
         condition: and
-
-      - type: status
-        status:
-          - 200

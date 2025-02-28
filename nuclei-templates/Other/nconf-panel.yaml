@@ -1,15 +1,20 @@
 id: nconf-panel
 
 info:
-  name: NConf Panel Detect
+  name: NConf Login Panel - Detect
   author: ritikchaddha
   severity: info
+  description: NConf login panel was detected.
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cwe-id: CWE-200
   metadata:
-    verified: true
+    max-request: 1
     shodan-query: http.title:"nconf"
+    verified: true
   tags: panel,nconf
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -26,3 +31,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4a0a0047304502204bff2cd96791dbbda35064a17afbd2ec1732b3f55a02145371bb06f4e3058807022100ebc4ad242340fdeed00533fd157e33f9f1515ac0b03e39a0b6a8ebd0f33ca148:922c64590222798bb761d5b6d8e72950

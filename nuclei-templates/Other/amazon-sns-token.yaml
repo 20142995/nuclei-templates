@@ -1,12 +1,15 @@
 id: amazon-sns-token
+
 info:
   name: Amazon SNS Token Detect
   author: TheBinitGhimire
   severity: info
   tags: file,token,amazon,aws
+
 file:
   - extensions:
       - all
+
     extractors:
       - type: regex
         name: amazon-sns-topic

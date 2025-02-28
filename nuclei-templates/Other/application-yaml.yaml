@@ -1,10 +1,12 @@
 id: application-yaml
+
 info:
   name: application.yaml detection
   author: Cristi vlad (@cristivlad25)
   severity: info
   description: Finds Application YAML files which often contain sensitive information.
   tags: misconfig
+
 requests:
   - method: GET
     path:
@@ -12,6 +14,7 @@ requests:
       - "{{BaseURL}}/app.yml"
       - "{{BaseURL}}/application.yaml"
       - "{{BaseURL}}/application.yml"
+
     stop-at-first-match: true
     matchers-condition: and
     matchers:
@@ -24,9 +27,11 @@ requests:
           - "platform:"
           - "server:"
           - "job:"
+
       - type: status
         status:
           - 200
+
       - type: dsl
         condition: or
         dsl:

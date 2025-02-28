@@ -2,14 +2,14 @@ id: post-timeline
 
 info:
   name: >
-    Post Timeline <= 2.2.5 - Reflected Cross-Site Scripting
+    Post Timeline <= 2.3.9 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f75966a5-e593-4c86-842d-c136ae847eb0?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/be76a310-d99f-43d8-a845-6bf20eb9a11d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.2.5')
+          - compare_versions(version, '<= 2.3.9')

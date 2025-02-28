@@ -1,4 +1,5 @@
 id: gocron-panel
+
 info:
   name: Gocron Panel Detect
   author: ffffffff0x
@@ -6,10 +7,12 @@ info:
   metadata:
     fofa-query: app="gocron-定时任务系统"
   tags: gocron,panel
+
 requests:
   - method: GET
     path:
       - "{{BaseURL}}"
+
     redirects: true
     max-redirects: 2
     matchers-condition: and
@@ -18,6 +21,7 @@ requests:
         part: body
         regex:
           - '<title>gocron - (.*)</title>'
+
       - type: status
         status:
           - 200

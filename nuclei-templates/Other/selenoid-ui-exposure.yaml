@@ -1,9 +1,10 @@
 id: selenoid-ui-exposure
+
 info:
   name: Selenoid UI Dashboard Exposure
-  author: pdteam
+  author: pd-team
   severity: medium
-  tags: panel
+
 requests:
   - method: GET
     path:

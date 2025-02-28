@@ -1,13 +1,16 @@
 id: debug-vars
+
 info:
   name: Golang expvar Information Disclosure
   author: luqman
   severity: low
   tags: go,debug,exposure
+
 requests:
   - method: GET
     path:
       - "{{BaseURL}}/debug/vars"
+
     matchers-condition: and
     matchers:
       - type: word
@@ -15,6 +18,7 @@ requests:
           - '"memstats":'
           - '"cmdline":'
         condition: and
+
       - type: status
         status:
           - 200

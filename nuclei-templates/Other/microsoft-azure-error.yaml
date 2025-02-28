@@ -1,4 +1,5 @@
 id: microsoft-azure-error
+
 info:
   name: Microsoft Azure Web App - Error 404
   author: dhiyaneshDK
@@ -6,15 +7,18 @@ info:
   metadata:
     shodan-query: title:"Microsoft Azure Web App - Error 404"
   tags: error,azure,microsoft
+
 requests:
   - method: GET
     path:
       - "{{BaseURL}}"
+
     matchers-condition: and
     matchers:
       - type: status
         status:
           - 404
+
       - type: word
         words:
           - "<title>Microsoft Azure Web App - Error 404</title>"

@@ -2,14 +2,14 @@ id: logo-slider-wp
 
 info:
   name: >
-    Logo Slider <= 3.5.3 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Logo Slider <= 4.1.0 - Authenticated (Author+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/723ed5c7-041f-4e03-83ad-43438e3265a1?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fa1c526d-b751-4461-9e54-e7704ca8ddc3?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.5.3')
+          - compare_versions(version, '<= 4.1.0')
