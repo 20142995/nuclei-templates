@@ -1,47 +1,24 @@
 id: buymeacoffee
 
 info:
-  name: >
-    Buy Me a Coffee – Button and Widget Plugin <= 3.6 - Authenticated (Administrator+) Stored Cross-Site Scripting
-  author: topscoder
-  severity: low
-  description: >
-    
-  reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f8f3ce3d-ae8a-4c0f-a74d-657225a932f1?source=api-scan
+  name: Buymeacoffee User Name Information - Detect
+  author: dwisiswant0
+  severity: info
+  description: Buymeacoffee user name information check was conducted.
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
+    cwe-id: CWE-200
   metadata:
-    fofa-query: "wp-content/plugins/buymeacoffee/"
-    google-query: inurl:"/wp-content/plugins/buymeacoffee/"
-    shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,buymeacoffee,low
+    max-request: 1
+  tags: osint,osint-finance,buymeacoffee
+
+self-contained: true
 
 http:
   - method: GET
-    redirects: true
-    max-redirects: 3
     path:
-      - "{{BaseURL}}/wp-content/plugins/buymeacoffee/readme.txt"
-
-    extractors:
-      - type: regex
-        name: version
-        part: body
-        group: 1
-        internal: true
-        regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
-
-      - type: regex
-        name: version
-        part: body
-        group: 1
-        regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+      - "https://www.buymeacoffee.com/{{user}}"
 
     matchers-condition: and
     matchers:
@@ -50,10 +27,8 @@ http:
           - 200
 
       - type: word
-        words:
-          - "buymeacoffee"
         part: body
+        words:
+          - "supporters"
 
-      - type: dsl
-        dsl:
-          - compare_versions(version, '<= 3.6')
+# digest: 490a0046304402201c59fb001120f735ed266523bc88e6bba3ead105e6154ebc5937bba3eca451c302203f608594f3dd6e45987a238864ce8b74e147176c89e56a800d5ae514685407d0:922c64590222798bb761d5b6d8e72950

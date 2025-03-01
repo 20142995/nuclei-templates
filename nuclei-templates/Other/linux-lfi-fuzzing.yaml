@@ -1,12 +1,10 @@
 id: linux-lfi-fuzzing
-
 info:
   name: Linux based LFI Fuzzing
   author: geeknik,unstabl3,pentest_swissky,sushantkamble,0xSmiley
   severity: high
   description: Fuzzes for /etc/passwd on passed URLs
   tags: linux,lfi,fuzz
-
 requests:
   - method: GET
     path:

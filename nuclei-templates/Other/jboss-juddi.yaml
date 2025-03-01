@@ -1,5 +1,4 @@
 id: jboss-juddi
-
 info:
   name: JBoss WS JUDDI Console Panel
   author: DhiyaneshDk
@@ -12,13 +11,11 @@ info:
   metadata:
     verified: true
   tags: jboss,juddi
-
 requests:
   - method: GET
     path:
       - "{{BaseURL}}"
       - "{{BaseURL}}/juddi/"
-
     stop-at-first-match: true
     matchers-condition: and
     matchers:
@@ -26,12 +23,10 @@ requests:
         part: body
         words:
           - "JBoss JUDDI"
-
       - type: word
         part: header
         words:
           - "text/html"
-
       - type: status
         status:
           - 200
