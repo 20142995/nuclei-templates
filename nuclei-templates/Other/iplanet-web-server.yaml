@@ -5,10 +5,11 @@ info:
   author: pussycat0x
   severity: info
   metadata:
+    max-request: 1
     fofa-query: app="iPlanet-Web-Server,-Enterprise-Edition-4.1"
   tags: tech,webserver
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -23,3 +24,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4a0a0047304502206c7d023074473f57bf45ffa23f36af1420d0252cc97d6b657902d7f982432510022100840d1044c124b97c9f02b062918e21446bd3f90121fddda039976800648a4f77:922c64590222798bb761d5b6d8e72950

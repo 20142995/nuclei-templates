@@ -11,14 +11,15 @@ info:
     Monitor VPN tunnel status via the AWS Management Console or CLI. If a tunnel is DOWN, troubleshoot according to AWS documentation and ensure redundancy by configuring multiple tunnels.
   reference:
     - https://docs.aws.amazon.com/vpn/latest/s2svpn/VPNConnections.html
+  metadata:
+    max-request: 2
   tags: cloud,devops,aws,amazon,vpn,aws-cloud-config
-
 variables:
   region: "us-east-1"
 
 flow: |
   code(1)
-  for(let VpnConnectionIds of template.vpnconnactions){
+  for(let VpnConnectionIds of iterate(template.vpnconnactions)){
     set("vpnid", VpnConnectionIds)
     code(2)
   }
@@ -53,4 +54,4 @@ code:
       - type: dsl
         dsl:
           - 'vpnid + " VPN tunnel is down"'
-# digest: 4a0a00473045022060f2043ba01e3483298dce863674208b94591615f73b91d4cb47e17eda4ebe310221009cfa4282260a3014b1f77a021f5d8248c4590b61f5e5904685fbcd631e178992:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402205e94efebf0467b3bfb7a7aecf9fdad9b2951ebcee018f10d63cb117c4a91617902202504d982be5f870195bf3c5a8ace855d2c26eca25ea383c1a22d9e5fc63784cf:922c64590222798bb761d5b6d8e72950

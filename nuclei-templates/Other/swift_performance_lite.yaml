@@ -18,4 +18,3 @@ http:
   - type: word
     words:
     - /wp-content/plugins/swift-performance-lite
-    case-insensitive: true

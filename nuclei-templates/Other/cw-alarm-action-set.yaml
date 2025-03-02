@@ -11,8 +11,9 @@ info:
     Configure at least one action for each CloudWatch alarm to ensure timely response to monitored issues.
   reference:
     - https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html
+  metadata:
+    max-request: 2
   tags: cloud,devops,aws,amazon,cloudwatch,aws-cloud-config
-
 variables:
   region: "us-east-1"
 
@@ -53,4 +54,4 @@ code:
       - type: dsl
         dsl:
           - '"The Amazon CloudWatch " + alarm +" is not configured with any actions for the ALARM state."'
-# digest: 4a0a004730450220699edd21da9a908d8160230a38300e78c76cce31988d83565ed8b7a0c9b41d70022100c607f34933362074e992f81390dae32347f888ffa68a9d97aac8aad03a388f55:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100ec74e58a4ecafde302484c27c761d114bc2c7babcae0491458a94cf6a12acb6d02206af1f79eb9666f2fbd805e82bd2ceb14b75a51fcde66b1105180ff55021ab68a:922c64590222798bb761d5b6d8e72950

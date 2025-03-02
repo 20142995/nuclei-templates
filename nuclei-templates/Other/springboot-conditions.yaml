@@ -4,6 +4,7 @@ info:
   name: Detect Springboot Conditions Actuator
   author: DhiyaneshDK
   severity: low
+  description: Springboot Conditions Actuator is exposed.
   reference:
     - https://raw.githubusercontent.com/maurosoria/dirsearch/master/db/dicc.txt
   metadata:
@@ -40,5 +41,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022036baad906f87bb34764714abb52adbc981dbbdf9fe0d9176dce67554161206ad022100bbb7b9d02c0f80c68ba4dc7b2936080e927aed84a496a9bacbe6f204a17ef1bb:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100b4c99ea0f0aa26c364fbc68de516c59e7fd9a22c797efa4f1ebfb6c5dc7b540c02202fcf4913c625ea10e9cc652868c43c591aefef93db0993bf516ab56e5a3aa45a:922c64590222798bb761d5b6d8e72950

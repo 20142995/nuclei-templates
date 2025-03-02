@@ -11,8 +11,9 @@ info:
     Enable actions for each CloudWatch alarm by setting the ActionEnabled parameter to true, allowing for automated responses to alarms.
   reference:
     - https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html
+  metadata:
+    max-request: 2
   tags: cloud,devops,aws,amazon,cloudwatch,aws-cloud-config
-
 variables:
   region: "us-east-1"
 
@@ -53,4 +54,4 @@ code:
       - type: dsl
         dsl:
           - '"The Amazon CloudWatch " + alarm + " does not have any active actions configured"'
-# digest: 4b0a00483046022100c25b4a5bed3d8e28421708a03ab05c2b09f619f6c38472a34377d2db18e4d730022100d057819cf7fbf55503e3a93b82daa4b438fb204056422e34bbcb5a6ddb4d425e:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100ede2c7feac5d47c4f073d7d85d6334cc220a65dacf1cea096983d1a464343dbc022018c9b15d0dfb8bf7d39afcebf8b0731a790cd21ac2ff470fd5abf2b245ee30a5:922c64590222798bb761d5b6d8e72950

@@ -4,6 +4,7 @@ info:
   name: Netsparker Enterprise Installer
   author: pussycat0x
   severity: info
+  description: Netsparker Enterprise is susceptible to the Installation page exposure due to misconfiguration.
   metadata:
     verified: true
     max-request: 1
@@ -32,5 +33,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a0046304402205e35258ddb467eedc0007ef8d3341c68685938f3b4da29c8dfe9f19f9a0fc0e1022056dd95e41e56a5184c497b7204044da9114721b3fb3d19c6880ab3682e597622:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100b765f288414a403ba3ebd2852d1ff181607d6c9451df23100e0045f1e02edae60221008f993a6a071a02319567168b9b611228e7d2d32a9533d16e27e76fdb263c8923:922c64590222798bb761d5b6d8e72950

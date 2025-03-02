@@ -20,4 +20,3 @@ http:
   - type: word
     words:
     - wn533a8
-    case-insensitive: true

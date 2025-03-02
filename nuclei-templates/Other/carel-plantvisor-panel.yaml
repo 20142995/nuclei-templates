@@ -4,6 +4,7 @@ info:
   name: CAREL Pl@ntVisor Panel
   author: Hardik-Solanki
   severity: info
+  description: Carel plantvisor panel was detected.
   metadata:
     max-request: 1
     shodan-query: title:"CAREL Pl@ntVisor"
@@ -26,5 +27,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a0046304402202073d91492cb50e9f368dfa7a5962594be943282b2753a07ec9bb2bba420534d02206bf50d0c0b4142b7613a7a3418a6a13b38c4a527dbcfcfb85b4bb99f8be697c7:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402202e4c56fd39298db06af224953fc07aadbd800dfd936f1b0fefc22f217ae845c302201b9945d8ee3c939e6c6ed182c513c6d83089e85decea16b50dce77aceb57a19b:922c64590222798bb761d5b6d8e72950

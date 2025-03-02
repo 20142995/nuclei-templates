@@ -4,6 +4,7 @@ info:
   name: Ulanzi Clock Detect
   author: fabaff
   severity: info
+  description: Ulanzi Clock panel was detected.
   metadata:
     max-request: 1
   tags: panel,ulanzi,iot
@@ -23,5 +24,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a00483046022100eb2eb0ec2d28b58609a194d0d92dc90cf172dc7d5c3ac4986fab7e9b3110ab56022100d8ef58c992c480152a5e86c43280ff07030fdbe18fa02d3eec6498dce3a2c2ae:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502204be2d198457a27a43e4e55ec2f04b009b11dbfaec0029be2e7720971227748e1022100ffca100f346e3db68abf6e38fbc9ac1e820162f1a16d44514a925f77dfcd1d39:922c64590222798bb761d5b6d8e72950

@@ -7,6 +7,8 @@ info:
     This template verifies if Amazon S3 buckets have bucket keys enabled to optimize the cost of AWS Key Management Service (SSE-KMS) for server-side encryption
   reference:
     - https://docs.aws.amazon.com/AmazonS3/latest/userguide/manage-versioning-examples.html
+  metadata:
+    max-request: 2
   tags: cloud,devops,aws,amazon,s3,aws-cloud-config
 
 flow: |
@@ -46,4 +48,4 @@ code:
       - type: dsl
         dsl:
           - '"Key is not enabled for S3 Bucket " + bucket'
-# digest: 490a0046304402207628f02f223a9c45013004373f631bfe358fe0898a91b4558b461cdbcb0cb33f02204c02ff4be552778912c6b81a4d7f06b0436bf0facd4066dd1b7b6a60c7fe8727:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a0048304602210083308c84907782cf3348c4fff3389776781332c7deba89a75342b2e764f38c08022100ee305e64ec5617a08240d14705ceaeadaa3bafb59ffc8108c9b668423b5bb25a:922c64590222798bb761d5b6d8e72950

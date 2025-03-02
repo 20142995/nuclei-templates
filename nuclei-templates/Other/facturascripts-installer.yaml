@@ -4,9 +4,14 @@ info:
   name: FacturaScripts Installer Exposure
   author: DhiyaneshDk
   severity: high
+  description: FacturaScripts is susceptible to the Installation page exposure due to misconfiguration.
+  classification:
+    cpe: cpe:2.3:a:facturascripts:facturascripts:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
+    vendor: facturascripts
+    product: facturascripts
     shodan-query: html:"FacturaScripts installer"
   tags: misconfig,facturascripts,install,exposure
 
@@ -32,5 +37,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a0048304602210081b08f2389de1eebc0faf078f956dd6fd13804fd3161b3fd193f2c2046e45556022100e9a10ff2e6ca6a08de695149c3d9e403313c7a0da92ce307731edcf0ffa88ee0:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502201210aaf72b62c349215510a9e48c6e69622df20927cedc45c0c1d0e0243d9a41022100fddcae6e46e500bb3d772f6518df1a14acbe612c9b15d812018c48b6e282b790:922c64590222798bb761d5b6d8e72950

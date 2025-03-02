@@ -4,6 +4,7 @@ info:
   name: Unauthenticated Axyom Network Manager
   author: pussycat0x
   severity: high
+  description: Axyom Network Manager exposed.
   metadata:
     verified: true
     max-request: 1
@@ -25,5 +26,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a00483046022100b401e74962f66d1b352273a6aba2dd5519f27dbd8c35d5fd8acbc2d78c284b16022100ca1e84c5143c7e97a3ed6988fb3d0996c92b31978229f191c1b0713edf780d57:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100e437687752ba142ea6c6a30726c60d9a4c628f24a9a5ba28559e31e8a013493402207fafb3136c91acee0d99d0c7abc3548643c842760280832b7e1bba7d5edfdecc:922c64590222798bb761d5b6d8e72950

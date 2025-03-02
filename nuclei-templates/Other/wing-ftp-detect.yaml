@@ -10,7 +10,7 @@ info:
     max-request: 1
     verified: true
     shodan-query: "Wing FTP Server"
-  tags: network,ftp,wing,detect
+  tags: network,ftp,wing,detect,detection,tcp
 
 tcp:
   - inputs:
@@ -24,4 +24,4 @@ tcp:
         part: body
         words:
           - "Wing FTP Server"
-# digest: 490a00463044022041b78c4dea63a1fbdd51b152e120900093db0ab7e81b050e75d03c542d80b4a10220476a48aa15c3c12290b8d485e4ddd49d48d0173d1bc14ad16cbf0d2079fb8acf:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502203defb3771d5674ec0781df11ff311cb4022600d00256447f1aa16a56147ed10c022100cbac61b0d5e9df3fc99efd759edf42258e48371d45d9379ae97fa1e1abc979b2:922c64590222798bb761d5b6d8e72950

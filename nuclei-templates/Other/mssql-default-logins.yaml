@@ -10,6 +10,7 @@ info:
     max-request: 7
     shodan-query: port:1433
   tags: js,mssql,default-login,network
+
 javascript:
   - pre-condition: |
       var m = require("nuclei/mssql");
@@ -39,5 +40,4 @@ javascript:
           - "response == true"
           - "success == true"
         condition: and
-
-# digest: 490a0046304402206b60400ec97d3b1d6289c5ce72754a9a6596a7975686f40f7d6117496bd57d0c02205ac97dcd45ad773380772e7435e20e3f5da64932e58d35f539ca9d8281b5c5e3:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100f5e6e592926e7a1eac66b5c0fbb88199b99e42ca6b97fd5549bdd972dd69cd87022100809c7233f45516b1bf510b1317b3a2124c6a0acf00ff5a1cbfc78856f0514cd6:922c64590222798bb761d5b6d8e72950

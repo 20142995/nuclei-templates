@@ -7,6 +7,8 @@ info:
     This template verifies that Amazon S3 buckets are configured with Multi-Factor Authentication (MFA) Delete feature, ensuring enhanced protection against unauthorized deletion of versioned objects
   reference:
     - https://docs.aws.amazon.com/cli/latest/reference/s3api/get-bucket-versioning.html
+  metadata:
+    max-request: 2
   tags: cloud,devops,aws,amazon,s3,aws-cloud-config
 
 flow: |
@@ -46,4 +48,4 @@ code:
       - type: dsl
         dsl:
           - '"The S3 bucket " + bucket +" is not configured to use MFA Delete feature"'
-# digest: 4a0a0047304502207b18bcd326a382b691f9645ba66223e79733146fbaaa7632197a652cb7319085022100d690b22a500eb8036ca670d596ead85d56ce5e576f1147e5e73430a5d49c3765:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100d5124e78a9716e0b243c2c88d86321a1efcaedb33ac3d4a68932ee2f27f4dd5b02205de1474ee06f1eca0c0eb398856f67d224c3720077f8f460b4a5cfe6b743991d:922c64590222798bb761d5b6d8e72950

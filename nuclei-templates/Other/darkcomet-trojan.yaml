@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: product:'DarkComet Trojan'
-  tags: network,c2,ir,osint,cti,darkcomet
+  tags: network,c2,ir,osint,cti,darkcomet,tcp
 
 tcp:
   - inputs:
@@ -28,4 +28,4 @@ tcp:
       - type: word
         words:
           - "BF7CAB464EFB"
-# digest: 4a0a0047304502200a11002790b98d838f1268ac519781f31d21cc7d6de772daa6439743a9d7da89022100ad8af513c9db33c346ada84219a3cbb41f62b380b035c59b1cabfe2929a2df08:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220496c4ecb90e5ad057e80b5ed43fd76e1ffe49507710115001f610756ec40d752022100a95a06de345ffed199a2972abb90d7927044ed435a82428d852445e8b8288515:922c64590222798bb761d5b6d8e72950

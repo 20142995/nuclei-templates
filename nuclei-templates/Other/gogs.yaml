@@ -5,22 +5,16 @@ info:
   tags: detect,tech,gogs
   severity: info
   metadata:
-    fofa-query:
-    - title="sign in - gogs"
-    google-query:
-    - intitle:"sign in - gogs"
     product: gogs
-    shodan-query:
-    - title:"sign in - gogs"
-    - http.title:"sign in - gogs"
-    - cpe:"cpe:2.3:a:gogs:gogs"
-    vendor: gogits
+    vendor: gogs
     verified: true
 http:
 - method: GET
   path:
   - '{{BaseURL}}/'
   matchers:
-  - type: regex
-    regex:
-    - (?mi)<title[^>]*>sign in - gogs.*?</title>
+  - type: word
+    words:
+    - <a class="item" target="_blank" href="https://gogs.io/docs" rel="noreferrer">帮助</a>
+    - content="gogs
+    case-insensitive: true

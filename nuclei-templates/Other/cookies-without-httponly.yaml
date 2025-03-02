@@ -18,26 +18,18 @@ info:
   metadata:
     verified: true
     max-request: 1
-  tags: generic,cookie,noisy,miscellaneous
+  tags: misconfig,http,cookie,generic
 
 flow: |
     http()
     javascript()
 
 http:
-  - pre-condition:
-      - type: dsl
-        dsl:
-          - 'method != "HEAD"'
-          - 'method != "OPTIONS"'
-        condition: and
-
-    fuzzing:
-      - part: header
-        type: postfix
-        mode: single
-        fuzz:
-          - ""
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+    host-redirects: true
+    max-redirects: 2
 
 javascript:
   - code: |
@@ -47,7 +39,7 @@ javascript:
         .filter(line => line.trim().toLowerCase().startsWith('set-cookie:'));
 
       const nonHttpOnlyCookies = setCookieLines.filter(line => !line.toLowerCase().includes('httponly'));
-      
+
       const cookieNames = nonHttpOnlyCookies.map(line => {
         const match = line.match(/set-cookie:\s*([^=]+)=/i);
         return match ? match[1] : null;

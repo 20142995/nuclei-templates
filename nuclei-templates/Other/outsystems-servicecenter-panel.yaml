@@ -8,10 +8,14 @@ info:
     OutSystems Service Center login panel was detected.
   reference:
     - https://www.outsystems.com/
+  classification:
+    cpe: cpe:2.3:a:outsystems:platform_server:*:*:*:*:*:*:*:*
   metadata:
     verified: true
-    max-request: 1
-    shodan-query: http.html:"outsystems"
+    max-request: 2
+    vendor: outsystems
+    product: platform_server
+    shodan-query: "http.html:\"outsystems\""
   tags: panel,outsystems,login,detect
 
 http:
@@ -36,4 +40,4 @@ http:
         group: 1
         regex:
           - 'environmentName:.?([a-z0-9A-Z\s]+).?'
-# digest: 490a0046304402205ff85bbed9d3f8c120b3872770a01f39fa86d38857a8763e5d34f55b954e49690220382ca79347083325befb9cc53f1563dd22da7742d69d978b4e7560f8b5c26587:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100f66494104331e0cda7f020621ec308a8b572ebb34a2e0b360d466d7fa86efa9902205febe8d7bf961d70e7982b433092afddbfb28430798bee5d76ead88c976472a6:922c64590222798bb761d5b6d8e72950

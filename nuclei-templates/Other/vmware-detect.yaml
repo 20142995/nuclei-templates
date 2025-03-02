@@ -1,4 +1,5 @@
 id: vmware-detect
+
 info:
   name: VMware Detection
   author: elouhi
@@ -7,8 +8,11 @@ info:
   reference:
     - https://www.pwndefend.com/2021/09/23/exposed-vmware-vcenter-servers-around-the-world-cve-2021-22005/
     - https://svn.nmap.org/nmap/scripts/vmware-version.nse
+  metadata:
+    max-request: 1
   tags: tech,vcenter,vmware
-requests:
+
+http:
   - raw:
       - |
         POST /sdk/ HTTP/1.1
@@ -25,21 +29,25 @@ requests:
               </RetrieveServiceContent>
            </soap:Body>
         </soap:Envelope>
+
     matchers-condition: and
     matchers:
       - type: status
         status:
           - 200
+
       - type: word
         part: body
         words:
           - 'ha-folder-root'
           - 'RetrieveServiceContentResponse'
         condition: or
+
       - type: word
         part: header
         words:
           - "text/xml"
+
     extractors:
       - type: regex
         part: body
@@ -51,3 +59,4 @@ requests:
           - "<osType>(.*?)</osType>"
           - "<productLineId>(.*?)</productLineId>"
           - "<apiType>(.*?)</apiType>"
+# digest: 4a0a00473045022100a531d39f8c3f6d3c73ede07ee87640406e7414ecd75cfd8e58d884ea81008fb8022035d58495dc3621aa71ebe3bb8d798edd82eb7deef4f9970797a098fa1b97732a:922c64590222798bb761d5b6d8e72950

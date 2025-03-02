@@ -7,11 +7,15 @@ info:
   description: Checks for a valid login on self hosted Grafana instance.
   reference:
     - https://owasp.org/www-community/attacks/Credential_stuffing
+  classification:
+    cpe: cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     shodan-query: title:"Grafana"
     fofa-query: title="Grafana"
-  tags: login-check,grafana,creds-stuffing,self-hosted
+    product: grafana
+    vendor: grafana
+  tags: self-hosted,creds-stuffing,login-check,grafana
 variables:
   username: "{{username}}"
   password: "{{password}}"
@@ -51,5 +55,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a0047304502207fa6c2d6cce086e723ac4fbf51dae2962116ee41bba7e62675dbc198c086354e022100c32ffecff72430025fa4c185f2d10781096541768e3c843e9e1c8e1d17022be6:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022021f76d6564ec5720b0dc50faf41fe85e704f213c9ef3e6d9af0c5951bffeed60022100de2fc6968bb52effbd9c799c9fc06a98b351518f62050db0b4b27ec45927b9e3:922c64590222798bb761d5b6d8e72950

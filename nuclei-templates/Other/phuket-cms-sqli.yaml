@@ -11,7 +11,7 @@ info:
   metadata:
     verified: true
     max-request: 2
-    google-dork: intext:"Developed by Phuket Solution"
+    google-query: intext:"Developed by Phuket Solution"
   tags: phuket,sqli,phuket-cms
 
 http:
@@ -30,5 +30,4 @@ http:
           - 'contains(content_type_2, "text/html")'
           - 'contains(body_2, "You have an error in your SQL syntax") && contains(body_1, "Phuket Solution")'
         condition: and
-
-# digest: 490a0046304402204fa392d3690c667521c148f540460ecf82abb63f25eb184e329454a554287ceb02206797687c70ece303d7f96881f3e0d8d756bb201910575568eaa8c2f8b7fdcad7:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221009a55c11d9ba964f424c0585a2b45652b475252153e196388d39e7d8e2f50b759022100af2c14975e4885b18d1929213af97a3ca0ffb0c9787ed371896e05dd7f863608:922c64590222798bb761d5b6d8e72950

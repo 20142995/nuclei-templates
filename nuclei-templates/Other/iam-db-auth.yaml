@@ -11,8 +11,9 @@ info:
     Enable IAM Database Authentication for MySQL and PostgreSQL RDS database instances to leverage IAM for secure, token-based access control.
   reference:
     - https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html
+  metadata:
+    max-request: 2
   tags: cloud,devops,aws,amazon,rds,aws-cloud-config
-
 variables:
   region: "ap-northeast-1"
 
@@ -53,4 +54,4 @@ code:
       - type: dsl
         dsl:
           - '"Database Authentication feature is not enabled for RDS database instance " + db'
-# digest: 4a0a00473045022100de421600413f2bb3306a9173334cd465c628dd5a198cec9ebe3bf5a373b4479602200bd9a29ac4bc3efe52763411a53243855f599f703baa22c7292da16898754f12:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022063a51b81cf2a6f80f3a19a3ba2fea4cfcf0b107e6ed3e318130da0eb34af064b02203e3ed181443111e2a118232b3346491f33c28f61d82cd86f3751558da9570d50:922c64590222798bb761d5b6d8e72950

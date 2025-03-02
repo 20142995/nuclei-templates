@@ -11,8 +11,9 @@ info:
     Restrict AMI sharing to specific, trusted AWS accounts and ensure they are not publicly accessible.
   reference:
     - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sharingamis-explicit.html
+  metadata:
+    max-request: 2
   tags: cloud,devops,aws,amazon,ami,aws-cloud-config
-
 variables:
   region: "us-east-1"
 
@@ -53,4 +54,4 @@ code:
       - type: dsl
         dsl:
           - 'ami + " AMI is publically shared"'
-# digest: 4a0a004730450220193e6725ccb97bbd7071e4dad36601e0e8625dd4901a653eacf3141faf6e8a82022100d7d61c14183f4a6563ac749634aa9af5e01332d52583cba6e703cf4958bbe63f:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220079156e39eca92cef40132a9da44be38cfb477558fd0249172888db782cba85402210092d8436f349fa51e1a63172e942b54b96af4482e623628435ece05e81c560ba1:922c64590222798bb761d5b6d8e72950

@@ -1,24 +1,47 @@
 id: gumroad
 
 info:
-  name: Gumroad User Name Information - Detect
-  author: dwisiswant0
-  severity: info
-  description: Gumroad user name information check was conducted.
+  name: >
+    Gumroad <= 3.1.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
+  author: topscoder
+  severity: low
+  description: >
+    
+  reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cd2abab4-f93c-454d-928d-128a490da0e2?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
-    cwe-id: CWE-200
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    max-request: 1
-  tags: osint,osint-shopping,gumroad
-
-self-contained: true
+    fofa-query: "wp-content/plugins/gumroad/"
+    google-query: inurl:"/wp-content/plugins/gumroad/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,gumroad,low
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
-      - "https://{{user}}.gumroad.com/"
+      - "{{BaseURL}}/wp-content/plugins/gumroad/readme.txt"
+
+    extractors:
+      - type: regex
+        name: version
+        part: body
+        group: 1
+        internal: true
+        regex:
+          - "(?mi)Stable tag: ([0-9.]+)"
+
+      - type: regex
+        name: version
+        part: body
+        group: 1
+        regex:
+          - "(?mi)Stable tag: ([0-9.]+)"
 
     matchers-condition: and
     matchers:
@@ -27,8 +50,10 @@ http:
           - 200
 
       - type: word
-        part: body
         words:
-          - "s profile picture"
+          - "gumroad"
+        part: body
 
-# digest: 4b0a00483046022100aebbc8025b0f4215cda3407a2da9128901f8f401bc692183ecec632e16af6364022100a6aed0d310f0684bba19372a284e6ee354db4f02a41f92e63c410325967295e9:922c64590222798bb761d5b6d8e72950
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 3.1.0')

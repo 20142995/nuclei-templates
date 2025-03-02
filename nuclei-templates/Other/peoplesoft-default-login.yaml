@@ -12,10 +12,13 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
     cwe-id: CWE-522
+    cpe: cpe:2.3:a:oracle:peoplesoft_enterprise_peopletools:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 200
     shodan-query: title:"Oracle PeopleSoft Sign-in"
+    product: peoplesoft_enterprise_peopletools
+    vendor: oracle
   tags: default-login,peoplesoft,oracle,fuzz
 
 http:
@@ -82,5 +85,4 @@ http:
       - type: status
         status:
           - 302
-
-# digest: 4a0a0047304502204c9270806e4ece6e7674409b718832dbf70da8c47007a1f21243f1ce30081cfa0221008881e332e66594eb8cff771c310b3036db3ee2af5d967264bfc975f208e67c45:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100d1adb8c0a205de0e257ba679d2618318d6727d74033901020527f902fc625110022066290d832d744108cdb8eb64a71d1c013062fcf86009db172cd14f12000a0f30:922c64590222798bb761d5b6d8e72950

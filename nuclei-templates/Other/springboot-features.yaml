@@ -4,6 +4,7 @@ info:
   name: Detects Springboot Features Actuator
   author: DhiyaneshDK
   severity: low
+  description: Springboot Features Actuator is exposed.
   metadata:
     verified: true
     max-request: 2
@@ -38,5 +39,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a00463044022070e2c6c3444f2f5256be2eccb57e1a8de5ce43b739c3c12cbb4151c44be16af902204eb1d4870869ffc94676913b7d26b20c29f4fdafb1740e1ef2ea332e64b0303e:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022054240120151474340eab5c4d8ecadd53f50d771782bdb8df6b9ee1d014ce3d5102203b62ae16f56e8777ac508638ff6f2e2489cb0a9845ec1bcecc2ecae98f4f4bc2:922c64590222798bb761d5b6d8e72950

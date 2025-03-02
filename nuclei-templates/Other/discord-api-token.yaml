@@ -9,7 +9,8 @@ info:
     - https://github.com/returntocorp/semgrep-rules/blob/develop/generic/secrets/gitleaks/discord-api-token.go
   metadata:
     verified: true
-  tags: discord,file,token
+  tags: file,keys,discord,token
+
 file:
   - extensions:
       - all
@@ -19,5 +20,4 @@ file:
         part: body
         regex:
           - (?i)(?:discord)(?:[0-9a-z\-_\t .]{0,20})(?:[\s|']|[\s|"]){0,3}(?:=|>|:=|\|\|:|<=|=>|:)(?:'|\"|\s|=|\x60){0,5}([a-f0-9]{64})(?:['|\"|\n|\r|\s|\x60|;]|$)
-
-# digest: 4a0a00473045022036aba4243305e0c7ebf0fc10d5881e524ab82a68415015798b9baaed8bafc6bf022100dfb1277553666c29673cba6499260d5842e0d71c0c24a0ea77fe4ba20c3d2485:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220288db8da7a7d8ff5f4331d8054282b2571242fb02abd7607ce26102538e77946022100bd66908f3cf393a2c9683721cafe492ed42f6ca277ebdee964460661746f9549:922c64590222798bb761d5b6d8e72950

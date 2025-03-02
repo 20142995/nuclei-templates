@@ -4,9 +4,14 @@ info:
   name: Ampache Music Installer
   author: tess
   severity: high
+  description: Ampache Music is susceptible to the Installation page exposure due to misconfiguration.
+  classification:
+    cpe: cpe:2.3:a:ampache:ampache:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
+    vendor: ampache
+    product: ampache
     shodan-query: title:"For the Love of Music - Installation"
   tags: misconfig,ampache,install,exposure
 
@@ -32,5 +37,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a004730450220020c9c3e61d3e0dd224a15a08b563deb0a3ff14d265a483afe84c92d9f4943a7022100c254394b0810c438a62a48fe93abf5b922cd509a7591b754dcbcfdc2017d45c4:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022026484ec6620105093718919d98ea28d4554b86ac73e09c4fbcf47fc5687910dd02204d0f27c10f55cb25c0a407897434b8b2aa4e40fdb343a9d11a9227411e4c35e6:922c64590222798bb761d5b6d8e72950

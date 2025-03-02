@@ -8,10 +8,14 @@ info:
     CISCO Expressway login panel was detected.
   reference:
     - https://www.cisco.com/c/en/us/products/unified-communications/expressway-series/index.html
+  classification:
+    cpe: cpe:2.3:a:cisco:expressway_software:*:*:*:*:*:*:*:*
   metadata:
-    max-request: 1
-    shodan-query: html:"Cisco Expressway"
     verified: true
+    max-request: 1
+    vendor: cisco
+    product: expressway_software
+    shodan-query: html:"Cisco Expressway"
   tags: panel,cisco,login,detect
 
 http:
@@ -32,4 +36,4 @@ http:
         group: 1
         regex:
           - 'Cisco\s+(?:Expressway|Expway)\s+([A-Za-z\s]+)<\/legend>'
-# digest: 490a00463044022017cea3c30c4e5c14448f32affcc2a76041719a68ce7b1b73917ca5b7add1b4bd022002fbfafa35171c448235c328299b377ed67c036b2cf72fca115108cf1b88f207:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022004c47b075770261be6fe73cc75f60914a39ce6f4293a84a2e45ae7abf47ddac4022074925b436243e9580dfb5ec45346f2b174c6122edbb6be4bd16389d155da9b67:922c64590222798bb761d5b6d8e72950

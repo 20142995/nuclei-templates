@@ -4,11 +4,16 @@ info:
   name: Apache HTTP Server Test Page
   author: dhiyaneshDk
   severity: info
-  reference:
-    - https://www.shodan.io/search?query=http.title%3A%22Apache+HTTP+Server+Test+Page+powered+by+CentOS%22
+  classification:
+    cpe: cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 1
+    vendor: apache
+    product: http_server
+    shodan-query: http.title:"Apache HTTP Server Test Page powered by CentOS"
   tags: tech,apache
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'
@@ -18,3 +23,4 @@ requests:
         words:
           - "<title>Apache HTTP Server Test Page powered by CentOS</title>"
         part: body
+# digest: 4a0a00473045022100cfd101a79ba689cc25d54f6fc80f47248b9f6fa92713e56e645f58a654275e4c022011a77b17b9521c2eab6384a9e7bbf4e0929b049ae03a27de5fec57bf737c46ba:922c64590222798bb761d5b6d8e72950

@@ -11,8 +11,9 @@ info:
     Modify the snapshot's visibility settings to ensure it is not public, only shared with specific AWS accounts.
   reference:
     - https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ShareSnapshot.html
+  metadata:
+    max-request: 2
   tags: cloud,devops,aws,amazon,rds,aws-cloud-config
-
 variables:
   region: "ap-northeast-1"
 
@@ -53,4 +54,4 @@ code:
       - type: dsl
         dsl:
           - '"RDS snapshot " + snapshot + " is public"'
-# digest: 4a0a0047304502210081a28e626fa15113ec4728cae1cd78218b292f7c71adc72cdb0b6d957475955302207063c6eda8c853ca2b1041f2751246979a75381a89e64b262b679667da1eb1eb:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502210095c4d7f8b1d8ccd88d2d2dc7419439aec85ffdfb81f22f0d0ab8f323b8683858022032a09c09060b762b583feccfecfa559177fac2e307cf4eb04873f8601cfc443c:922c64590222798bb761d5b6d8e72950

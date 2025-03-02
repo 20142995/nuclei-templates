@@ -7,6 +7,8 @@ info:
     Verifies that Amazon S3 buckets have object versioning enabled, providing a safeguard for recovering overwritten or deleted objects
   reference:
     - https://docs.aws.amazon.com/AmazonS3/latest/userguide/manage-versioning-examples.html
+  metadata:
+    max-request: 2
   tags: cloud,devops,aws,amazon,s3,aws-cloud-config
 
 flow: |
@@ -47,4 +49,4 @@ code:
       - type: dsl
         dsl:
           - '"Versioning is not enabled for S3 Bucket " + bucket'
-# digest: 4b0a00483046022100ceb8b6be9871b6b9b57c5aa9add8902c3177845310afee02c6f8acc0cec48331022100fc98d53a049eaf0f8450f979233fffec17fd5c23d4c90fb78e68d8f05869f7d4:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100a74b2b0fc719e85dc4f0eecfdcb547ce2010549e0b2f59604b1b25d880a1b945022100efac9d12807b1be9182827d7d24700caa711b875b12f67a9a147458c4d2d9715:922c64590222798bb761d5b6d8e72950

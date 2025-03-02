@@ -13,7 +13,7 @@ info:
     verified: "true"
     max-request: 1
     shodan-query: 'ssl:postalCode=3540 ssl.jarm:3fd21b20d00000021c43d21b21b43de0a012c76cf078b8d06f4620c2286f5e'
-  tags: c2,ir,osint,havoc,network
+  tags: jarm,c2,ir,osint,cti,havoc,network,tcp
 tcp:
   - inputs:
       - data: 2E
@@ -24,5 +24,4 @@ tcp:
       - type: dsl
         dsl:
           - "jarm(Hostname) == '3fd21b20d00000021c43d21b21b43de0a012c76cf078b8d06f4620c2286f5e'"
-
-# digest: 4a0a00473045022016caacc2b1034728b365880ad1e0fbedc9ec00b88431c4bb6af98921a48bb2550221009904948c414df7343a07be0564c3de1fb57cf2e26a843ba05dc8e66d24db385d:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100b24163af0def44217c445ce4a5aebe22b792c849753106d25b1075c14576d7480221009c38db979496e9001b945fd90801683dd46fe28176ef8f624196f55cf7feec16:922c64590222798bb761d5b6d8e72950

@@ -6,19 +6,21 @@ info:
   severity: high
   description: |
     CrushFTP Anonymous login credentials were discovered.
+  classification:
+    cpe: cpe:2.3:a:crushftp:crushftp:*:*:*:*:*:*:*:*
   metadata:
-    shodan-query: html:"CrushFTP"
     verified: true
     max-request: 2
-  tags: default-logins,anonymous,crushftp
+    vendor: crushftp
+    product: crushftp
+    shodan-query: html:"CrushFTP"
+  tags: default-logins,anonymous,crushftp,default-login
 
 http:
   - raw:
       - |
         GET /WebInterface/ HTTP/1.1
         Host: {{Hostname}}
-
-
       - |
         POST /WebInterface/function/ HTTP/1.1
         Host: {{Hostname}}
@@ -38,7 +40,6 @@ http:
         words:
           - "text/xml"
 
-
     extractors:
       - type: regex
         name: auth
@@ -47,4 +48,4 @@ http:
         group: 1
         regex:
           - 'currentAuth=([0-9a-zA-Z]+)'
-# digest: 490a00463044022047ed09e7cce78c6ef3d5812fd4d9f0c9b9325f82c20c0eeaaa4b280b7853ec810220750d2e91ea2a302be6eebf420b4dee340c13ff61593ff73ac8ba9db2582b68cf:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022074d36183e0fed2581fffd68efd0ff769a48df9462f1fba884799a00757a84b36022003256047913294fa0fcdbfcb975d860eccb1c1195e9e2fe06866bc6dd30c5e73:922c64590222798bb761d5b6d8e72950

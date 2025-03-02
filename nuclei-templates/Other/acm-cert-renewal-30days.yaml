@@ -11,8 +11,9 @@ info:
     Set up Amazon CloudWatch to monitor ACM certificate expiration and automate renewal notifications or processes.
   reference:
     - https://docs.aws.amazon.com/acm/latest/userguide/acm-renewal.html
+  metadata:
+    max-request: 2
   tags: cloud,devops,aws,amazon,acm,aws-cloud-config
-
 variables:
   region: "us-east-1"
 
@@ -54,4 +55,4 @@ code:
       - type: dsl
         dsl:
           - '"The AWS ACM Certificate " + certificate +" is about to expire in 30 days"'
-# digest: 4a0a004730450220756b5be6dcc7136b4b633c69403bc8a7d096c35c2a8275b99855b974e5c6ddd102210097de27a237f011112a45966e4320e15b0b9ee2af6762bd66817106963c31b0d8:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220243fb2914333499fae730b472688256b5a3efec50ba804e061787fe3e4ca514402204e288a97312494ca3b200361da1cac4bf86c99217569211c89a30c226389e960:922c64590222798bb761d5b6d8e72950

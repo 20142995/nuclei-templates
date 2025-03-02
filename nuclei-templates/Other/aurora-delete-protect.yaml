@@ -11,8 +11,9 @@ info:
     Enable Deletion Protection by modifying the Aurora cluster settings in the AWS Management Console or via the AWS CLI.
   reference:
     - https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/DBInstanceDeletionProtection.html
+  metadata:
+    max-request: 2
   tags: cloud,devops,aws,amazon,aurora,rds,aws-cloud-config
-
 variables:
   region: "ap-northeast-1"
 
@@ -53,4 +54,4 @@ code:
       - type: dsl
         dsl:
           - '"Deletion Protection safety feature is not enabled for " + cluster'
-# digest: 4b0a00483046022100c1c1ed75c7401266f13e1fc388a357df843c7994ab44ae8f501b14842ab7ec24022100b6c077b49006fb9ca13885abddf6be9c787d64eb415a13972e5fa3ea637792f3:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100e3859aaaa478bed03d4d145c87c574732729a84d8b3ed7d08567e299719fc2120220507c3e70335448d850e74572c307f74cf8df2519ee6dbef76dee59035be39669:922c64590222798bb761d5b6d8e72950

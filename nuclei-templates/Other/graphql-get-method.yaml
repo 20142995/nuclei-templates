@@ -12,12 +12,17 @@ info:
     - https://github.com/dolevf/Damn-Vulnerable-GraphQL-Application
     - https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html
     - https://graphql.security/
-  tags: graphql
+  metadata:
+    max-request: 2
+  tags: graphql,misconfig
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/graphql?query={__typename}"
+      - "{{BaseURL}}/api/graphql?query={__typename}"
+
+    stop-at-first-match: true
 
     matchers-condition: and
     matchers:
@@ -34,3 +39,4 @@ requests:
         part: header
         words:
           - "application/json"
+# digest: 4a0a004730450220732f0825a10fe1164e0c6437f367c90719667a9abb3cc4d158f8e04e26d8a3530221008d227947bd767557dbcd326331273cd63315acd956e8218b9dd1ddb9da04d647:922c64590222798bb761d5b6d8e72950

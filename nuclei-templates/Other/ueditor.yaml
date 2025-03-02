@@ -6,10 +6,8 @@ info:
   severity: info
   metadata:
     product: ueditor
-    shodan-query:
-    - html:"ueditor"
-    vendor: baidu
-    verified: true
+    vendor: 00_unknown
+    verified: false
 http:
 - method: GET
   path:
@@ -17,5 +15,5 @@ http:
   matchers:
   - type: word
     words:
-    - ueditor
+    - ueditor.all.js
     case-insensitive: true

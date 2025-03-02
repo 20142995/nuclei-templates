@@ -7,13 +7,19 @@ info:
   description: SAP SuccessFactors login panel was detected.
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:sap:successfactors:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
-    shodan-query: title:"Login - SAP SuccessFactors"
-  tags: sap,detect
+    vendor: sap
+    product: successfactors
+    shodan-query:
+      - title:"Login - SAP SuccessFactors"
+      - http.title:"login - sap successfactors"
+    fofa-query: title="login - sap successfactors"
+    google-query: intitle:"login - sap successfactors"
+  tags: panel,sap,detect
 
 http:
   - method: GET
@@ -37,5 +43,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a0046304402203eebe277eab3442efd1dbea4fc5882f386fa9ad7b915c479bd4df392b157d1e002206125def64c7ca9ac03b5f14519f22b5b13d6062f1ec5d1c71d3dfbe97ee5f093:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402202a509192cd6dd9a56e66d9ed11c74fe5a2326df05614ab752e7cb699bb0d433902203c407e1743e1ad0389d7d445fdfa11dc6420e2315e1137105dd645673ada29bb:922c64590222798bb761d5b6d8e72950

@@ -1,12 +1,17 @@
 id: permissions-installer
 
 info:
-  name: Permissions  Installer Exposure
+  name: Permissions Installer Exposure
   author: pussycat0x
   severity: high
+  description: Permissions Installer is susceptible to the Installation page exposure due to misconfiguration.
+  classification:
+    cpe: cpe:2.3:a:suse:permissions:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
+    vendor: suse
+    product: permissions
     shodan-query: title:" Permissions | Installer"
   tags: misconfig,permissions,install,exposure
 
@@ -25,5 +30,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022100cacf20f1d8e67f9dbf84f73d45611e24cbac06fd72749524e34e1815c2a5b8a202203f670f9119734a8b1e702c9defac32037f26637b3ae39b205aa5e4032f1f2d4f:922c64590222798bb761d5b6d8e72950
+# digest: 480a00453043021f5b277c669b2b65561636600bf2de8e454cb8311f3e54341c97f15102271a9a02207aa53cf3436d4c4c2644d967d28a2b7869db80ed0387ec294d00145b7360011b:922c64590222798bb761d5b6d8e72950

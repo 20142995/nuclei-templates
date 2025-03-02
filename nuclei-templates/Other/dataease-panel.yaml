@@ -11,11 +11,14 @@ info:
   classification:
     cpe: cpe:2.3:a:dataease:dataease:*:*:*:*:*:*:*:*
   metadata:
-    max-request: 1
-    product: dataease
-    shodan-query: html:"Dataease"
-    vendor: dataease
     verified: true
+    max-request: 1
+    vendor: dataease
+    product: dataease
+    shodan-query:
+      - html:"Dataease"
+      - http.html:"dataease"
+    fofa-query: body="dataease"
   tags: login,panel,dataease
 
 http:
@@ -33,4 +36,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100ab974518fc45b06d7a3a6fce97a69772da8d341cb130009593d5f9f10939f563022100d16e71fd20628009f748f93ded21d8643cd34c23ecfc00447bf2533c946d65d3:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100c58e6baf85941e0809cf076f5c9b3734f6e6f30fc389f5232422896136bc7fbe02203fdc81a20e2a626646643b0fc9a80ac422b71203152106758885b6b15b56ebcc:922c64590222798bb761d5b6d8e72950

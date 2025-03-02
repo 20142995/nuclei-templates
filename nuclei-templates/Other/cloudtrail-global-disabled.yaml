@@ -11,8 +11,9 @@ info:
     Enable global service logging in CloudTrail by creating or updating a trail to include global services. This ensures comprehensive activity monitoring.
   reference:
     - https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html
+  metadata:
+    max-request: 2
   tags: cloud,devops,aws,amazon,cloudtrail,aws-cloud-config
-
 variables:
   region: "ap-south-1"
 
@@ -53,4 +54,4 @@ code:
       - type: dsl
         dsl:
           - '"CloudTrail trail" + trail + " is not configured to record API calls for AWS global services"'
-# digest: 4a0a004730450221009edff671d27bdeaf0556428297d56afb1404ff3032d9ae4b61578c2b239ec4c502202ea0baf81ef1917992591736e8dfd44578f85f84bbb8c869fca718fecefac3c0:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100ad4752dd1f37d257de88d0a6b6355db49690bba904f5fbd3d45a1b7b38e1760e022100ec11a819b53b9e07542d121928b8ff464328ee9cb8eebca012f4cacfd3cb024f:922c64590222798bb761d5b6d8e72950

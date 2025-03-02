@@ -4,9 +4,14 @@ info:
   name: Unauthenticated LDAP Account Manager
   author: tess
   severity: medium
+  description: LDAP Account Manager is exposed to external users.
+  classification:
+    cpe: cpe:2.3:a:ldap-account-manager:ldap_account_manager:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
+    vendor: ldap-account-manager
+    product: ldap_account_manager
     shodan-query: http.title:"LDAP Account Manager"
   tags: ldap,misconfig,unauth
 
@@ -33,5 +38,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022032233f713acda105bdff8c9b914343d3510d85589eaf3601accf44a137ae1510022100962df565eb9092f35e87bc2b6874f536a0fdb775721e73098ee1884823158957:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100e428c4ea2e89d8720404180a5b9e09d4d8f1f4726e5f3c1faeaec50b205240c6022100a7635d7f14a81a84a4aa493de40ddb45eaa7e0302f78d54a2e7f4bdb134e5bad:922c64590222798bb761d5b6d8e72950

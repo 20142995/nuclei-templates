@@ -4,7 +4,7 @@ info:
   name: WordPress DB Backup
   author: Suman_Kar
   severity: medium
-  tags: wordpress,backup
+ 
 
 requests:
   - method: GET

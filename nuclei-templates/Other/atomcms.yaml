@@ -18,4 +18,3 @@ http:
   - type: word
     words:
     - atomcms
-    case-insensitive: true

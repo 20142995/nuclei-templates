@@ -4,7 +4,7 @@ info:
   name: Firebase Cloud Messaging Token
   author: Devang-Solanki
   severity: medium
-  tags: token,file,fcm,firebase,google
+  tags: file,keys,token,fcm,firebase,google
 file:
   - extensions:
       - all
@@ -13,5 +13,4 @@ file:
       - type: regex
         regex:
           - '[A-Za-z0-9-_]+:APA91b[A-Za-z0-9-_#]+'
-
-# digest: 4b0a00483046022100bc7886851ceb66a835c70f4d80ac2c052733d0b5bd41d73bb7b2e15b529d3e5b022100c1e3f33f21a2869bbc70a3e425d43ea32e76d39f170458498baeae985d4b36ea:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221008836d92c97a4e9f34e3b16e134026fa3a7ff597e74f9e3148f4a4db53f1ff746022100f72542dd51916482513f1011dae6cde2de9f148570fb4ff2aac0d39ba2a286fc:922c64590222798bb761d5b6d8e72950

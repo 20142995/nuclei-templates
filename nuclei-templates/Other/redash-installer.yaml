@@ -4,9 +4,14 @@ info:
   name: Redash Installer Exposure
   author: DhiyaneshDk
   severity: high
+  description: Redash is susceptible to the Installation page exposure due to misconfiguration.
+  classification:
+    cpe: cpe:2.3:a:redash:redash:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
+    vendor: redash
+    product: redash
     shodan-query: html:"Redash Initial Setup"
   tags: misconfig,redash,install
 
@@ -32,5 +37,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022071dc8472677b54b3b9fd6c9ce52b06dd3a80d83a36f1ee2c99b37a8ea3ea9bec0221008e4e3b0dd36bbab8c1b40f0c76a8ec63b173963ad6bcb67bb3ca07a720265c75:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402205450cfe5c751a46b1d398fc2d71380ecd1a1ba87f58f127907abbab104fceffe02203e86373e99ba8f53df3926dbbc3ec7d6e31970ab23ff20a7e23c84563463e042:922c64590222798bb761d5b6d8e72950

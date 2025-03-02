@@ -11,9 +11,9 @@ info:
     Enable management event logging in CloudTrail by creating a new trail or updating existing trails to include management events.
   reference:
     - https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html
+  metadata:
+    max-request: 2
   tags: cloud,devops,aws,amazon,cloudtrail,aws-cloud-config
-
-
 variables:
   region: "ap-south-1"
 
@@ -54,4 +54,4 @@ code:
       - type: dsl
         dsl:
           - '"CloudTrail trail" + trail + " is not configured to capture management operations performed on your AWS cloud resources"'
-# digest: 4a0a00473045022071c61afb61f0c431e2f7edf10563f582ede9a3a52e70a847ac8c6423758f5777022100e921cca38de3640c42ba86369837d9015c0b7b371c218eac3281f789392f77bd:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100c23af41ffe65ebbf7f4ea184345be1af712eb20af947b75194e060e21952e352022100b20648518cb36f80a826bfe23d60bda79468590ec8a3a9a34a412a45213a72ea:922c64590222798bb761d5b6d8e72950

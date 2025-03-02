@@ -4,6 +4,7 @@ info:
   name: Qibocms - Arbitrary File Download
   author: theabhinavgaur
   severity: high
+  description: Qibocms is vulnerable to arbitrary file download vulnerability.
   metadata:
     verified: true
     max-request: 1
@@ -31,5 +32,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a0046304402202c6815be4e274af7b5159756be6be0c4b40c2cb8c71c10b9657760b563d5a1d90220754631b38babc7faee6778bcedccf957f1bcb73b3d49c3408a3ce7947b087005:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100c0b7dec25effde05152b788b381a34c0e2c486f1255118b932612e2ae006c31c02202dd448254a45e034cc541bfc463ba2612df81eec141eb3ecad9798e7ef72e115:922c64590222798bb761d5b6d8e72950

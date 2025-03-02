@@ -9,7 +9,8 @@ info:
     - https://github.com/returntocorp/semgrep-rules/blob/develop/generic/secrets/gitleaks/easypost-test-api-token.yaml
   metadata:
     verified: true
-  tags: easypost,file,token
+  tags: file,keys,easypost,token
+
 file:
   - extensions:
       - all
@@ -19,5 +20,4 @@ file:
         part: body
         regex:
           - EZTK(?i)[a-z0-9]{54}
-
-# digest: 4a0a0047304502202205a242f36163c78f02e5793fa0ef5d707ecce2bc367cad05ce286d75e556b302210087b1d1ce6b50b243c3a28291aed68b1f5f68cf3308330443afbdcb3b87fab4a5:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502203dd85db2c1068997e8fb7bc62655321696e8f1358abd691a5f5df79b54827cd7022100bf06d82d933e44e7d9b9f3cea879f1eda8e030d0c31f01b3c9c615d64c22e7f1:922c64590222798bb761d5b6d8e72950

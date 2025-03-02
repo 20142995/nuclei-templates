@@ -7,6 +7,8 @@ info:
     Verifies that no Amazon IAM policies grant full administrative privileges, ensuring adherence to the Principle of Least Privilege
   reference:
     - https://docs.aws.amazon.com/cli/latest/reference/iam/get-policy-version.html
+  metadata:
+    max-request: 2
   tags: cloud,devops,aws,amazon,iam,aws-cloud-config
 
 flow: |
@@ -49,4 +51,4 @@ code:
       - type: dsl
         dsl:
           - '"The IAM policy " + policy +" is Overly Permissive"'
-# digest: 4a0a0047304502203eeeb24dbf1cfd3f41550e0c0b66bfb9ba23ea9912139aa2385e48b3a668d336022100dcb4c90fbb816ab247ea9d506497b900640b3d052bb2ce2b2f8b9a9e7fe58d9e:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502210098940409f5672fc1f68da9c1907754acea1d0241433323f390a792dd797e743c0220707d3a42896f419018cb2e0823eeffe4d2b6d582e98eda0a9362311f0d423bce:922c64590222798bb761d5b6d8e72950

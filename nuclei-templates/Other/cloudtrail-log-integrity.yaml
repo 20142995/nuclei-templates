@@ -11,8 +11,9 @@ info:
     Enable log file integrity validation on all CloudTrail trails to ensure the integrity and authenticity of your logs.
   reference:
     - https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-log-file-validation-intro.html
+  metadata:
+    max-request: 2
   tags: cloud,devops,aws,amazon,cloudtrail,aws-cloud-config
-
 variables:
   region: "ap-south-1"
 
@@ -53,4 +54,4 @@ code:
       - type: dsl
         dsl:
           - '"The log file integrity validation is not enabled for CloudTrail trail" + trail'
-# digest: 4a0a00473045022100facdee59eb1d2eca53313cf4f8de941c2f7a0857645f153ad2a64c81b51d9a67022059981aa1842b49de13fc78b6673e74c755632f673f08c402ad66f59074cc2e37:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100db42b4c20d12be50805623fbaab88e9c15567c638ebd384bb98458c0c5d3034d02201378e79dbdd61fabf0a1416326e5047af6e1ac64e10aecd8d091285824f89f32:922c64590222798bb761d5b6d8e72950

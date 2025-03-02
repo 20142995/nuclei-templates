@@ -8,7 +8,7 @@ info:
     - https://docs.stackhawk.com/apidocs.html
   metadata:
     verified: true
-  tags: token,file
+  tags: file,keys,token
 file:
   - extensions:
       - all
@@ -17,5 +17,4 @@ file:
       - type: regex
         regex:
           - "hawk\\.[0-9A-Za-z\\-_]{20}\\.[0-9A-Za-z\\-_]{20}"
-
-# digest: 4b0a00483046022100b4a0f7ece8b51f8686bf0d593526edd0dd5f2c3df30b8ce70034521bd4981fd4022100f41b61c61d8704d8886b2625a00ebc51bf5876da8263394a59006dc026acf9d9:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220297d107d0c827409fd554ec8e76b0ad34a267639a803ea3084ddbf4722600d11022100c77296c021e944b229f3d0da74d8811dca14b047780ec3886e7feb4e73451532:922c64590222798bb761d5b6d8e72950
